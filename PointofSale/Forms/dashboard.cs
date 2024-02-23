@@ -170,6 +170,23 @@ namespace PointofSale
             childForm.Show();
         }
 
+        public void openChildForm12(Form childForm)
+        {
+            //if (activeForm != null)
+            //{
+            //    activeForm.Close();
+            //}
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
         private void button22_Click(object sender, EventArgs e)
         {
             //openChildForm(new Expences.addExpences());
@@ -206,10 +223,13 @@ namespace PointofSale
             this.button21 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.button32 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button27 = new System.Windows.Forms.Button();
             this.button28 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button24 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -217,9 +237,6 @@ namespace PointofSale
             this.button12 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
@@ -227,6 +244,9 @@ namespace PointofSale
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.btnInvoice = new System.Windows.Forms.Button();
+            this.lblJobNo = new System.Windows.Forms.Label();
+            this.panelChildForm.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -283,6 +303,7 @@ namespace PointofSale
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panelChildForm.Controls.Add(this.lblJobNo);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(214, 0);
             this.panelChildForm.Name = "panelChildForm";
@@ -602,6 +623,7 @@ namespace PointofSale
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panelSideMenu.Controls.Add(this.btnInvoice);
             this.panelSideMenu.Controls.Add(this.button32);
             this.panelSideMenu.Controls.Add(this.button26);
             this.panelSideMenu.Controls.Add(this.panel5);
@@ -622,6 +644,41 @@ namespace PointofSale
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(214, 668);
             this.panelSideMenu.TabIndex = 2;
+            // 
+            // button32
+            // 
+            this.button32.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button32.FlatAppearance.BorderSize = 0;
+            this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button32.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button32.ForeColor = System.Drawing.Color.White;
+            this.button32.Image = ((System.Drawing.Image)(resources.GetObject("button32.Image")));
+            this.button32.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button32.Location = new System.Drawing.Point(0, 1220);
+            this.button32.Name = "button32";
+            this.button32.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.button32.Size = new System.Drawing.Size(197, 39);
+            this.button32.TabIndex = 16;
+            this.button32.Text = ".....";
+            this.button32.UseVisualStyleBackColor = true;
+            // 
+            // button26
+            // 
+            this.button26.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button26.FlatAppearance.BorderSize = 0;
+            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button26.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button26.ForeColor = System.Drawing.Color.White;
+            this.button26.Image = ((System.Drawing.Image)(resources.GetObject("button26.Image")));
+            this.button26.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button26.Location = new System.Drawing.Point(0, 1181);
+            this.button26.Name = "button26";
+            this.button26.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.button26.Size = new System.Drawing.Size(197, 39);
+            this.button26.TabIndex = 15;
+            this.button26.Text = "Log Off";
+            this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // panel5
             // 
@@ -685,6 +742,23 @@ namespace PointofSale
             this.button29.Text = "System Settings";
             this.button29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button29.UseVisualStyleBackColor = false;
+            // 
+            // button25
+            // 
+            this.button25.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button25.FlatAppearance.BorderSize = 0;
+            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button25.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button25.ForeColor = System.Drawing.Color.White;
+            this.button25.Image = ((System.Drawing.Image)(resources.GetObject("button25.Image")));
+            this.button25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button25.Location = new System.Drawing.Point(0, 1038);
+            this.button25.Name = "button25";
+            this.button25.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.button25.Size = new System.Drawing.Size(197, 39);
+            this.button25.TabIndex = 13;
+            this.button25.Text = "Settings";
+            this.button25.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -807,58 +881,6 @@ namespace PointofSale
             this.button23.UseVisualStyleBackColor = false;
             this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
-            // button32
-            // 
-            this.button32.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button32.FlatAppearance.BorderSize = 0;
-            this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button32.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button32.ForeColor = System.Drawing.Color.White;
-            this.button32.Image = ((System.Drawing.Image)(resources.GetObject("button32.Image")));
-            this.button32.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button32.Location = new System.Drawing.Point(0, 1220);
-            this.button32.Name = "button32";
-            this.button32.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.button32.Size = new System.Drawing.Size(197, 39);
-            this.button32.TabIndex = 16;
-            this.button32.Text = ".....";
-            this.button32.UseVisualStyleBackColor = true;
-            // 
-            // button26
-            // 
-            this.button26.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button26.FlatAppearance.BorderSize = 0;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button26.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button26.ForeColor = System.Drawing.Color.White;
-            this.button26.Image = ((System.Drawing.Image)(resources.GetObject("button26.Image")));
-            this.button26.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button26.Location = new System.Drawing.Point(0, 1181);
-            this.button26.Name = "button26";
-            this.button26.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.button26.Size = new System.Drawing.Size(197, 39);
-            this.button26.TabIndex = 15;
-            this.button26.Text = "Log Off";
-            this.button26.UseVisualStyleBackColor = true;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
-            // 
-            // button25
-            // 
-            this.button25.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button25.FlatAppearance.BorderSize = 0;
-            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button25.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button25.ForeColor = System.Drawing.Color.White;
-            this.button25.Image = ((System.Drawing.Image)(resources.GetObject("button25.Image")));
-            this.button25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button25.Location = new System.Drawing.Point(0, 1038);
-            this.button25.Name = "button25";
-            this.button25.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.button25.Size = new System.Drawing.Size(197, 39);
-            this.button25.TabIndex = 13;
-            this.button25.Text = "Settings";
-            this.button25.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -979,6 +1001,34 @@ namespace PointofSale
             this.panelLogo.Size = new System.Drawing.Size(197, 73);
             this.panelLogo.TabIndex = 0;
             // 
+            // btnInvoice
+            // 
+            this.btnInvoice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInvoice.FlatAppearance.BorderSize = 0;
+            this.btnInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInvoice.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInvoice.ForeColor = System.Drawing.Color.Lime;
+            this.btnInvoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInvoice.Location = new System.Drawing.Point(0, 1259);
+            this.btnInvoice.Name = "btnInvoice";
+            this.btnInvoice.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnInvoice.Size = new System.Drawing.Size(197, 39);
+            this.btnInvoice.TabIndex = 17;
+            this.btnInvoice.Text = "Create Invoice";
+            this.btnInvoice.UseVisualStyleBackColor = true;
+            this.btnInvoice.Visible = false;
+            this.btnInvoice.Click += new System.EventHandler(this.btnInvoice_Click);
+            // 
+            // lblJobNo
+            // 
+            this.lblJobNo.AutoSize = true;
+            this.lblJobNo.Location = new System.Drawing.Point(7, 4);
+            this.lblJobNo.Name = "lblJobNo";
+            this.lblJobNo.Size = new System.Drawing.Size(35, 13);
+            this.lblJobNo.TabIndex = 0;
+            this.lblJobNo.Text = "label1";
+            this.lblJobNo.Visible = false;
+            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -998,6 +1048,8 @@ namespace PointofSale
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.dashboard_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.dashboard_FormClosed);
             this.Load += new System.EventHandler(this.dashboard_Load);
+            this.panelChildForm.ResumeLayout(false);
+            this.panelChildForm.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -1081,10 +1133,11 @@ namespace PointofSale
             hideSubMenu();
         }
 
-        private void button22_Click_1(object sender, EventArgs e)
+        public void button22_Click_1(object sender, EventArgs e)
         {
             openChildForm(new RegisterQ());
             hideSubMenu();
+            
         }
 
         private void button20_Click(object sender, EventArgs e)
@@ -1145,6 +1198,13 @@ namespace PointofSale
         {
             openChildForm(new MonthlySalesChart());
             hideSubMenu();
+        }
+
+        private void btnInvoice_Click(object sender, EventArgs e)
+        {
+            openChildForm(new RegisterQ(lblJobNo.Text));
+            hideSubMenu();
+            btnInvoice.Visible = false;
         }
     }
 }

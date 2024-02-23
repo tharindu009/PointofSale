@@ -32,6 +32,8 @@ namespace PointofSale
             BindCustomer();
             BindEmployee();
             BindEmployee2();
+            btnItemList.Visible = false;
+            pnlService.Visible = false;
             //cmbDiff.Visible = false;
             //ComboCategory.Visible = false;
         }
@@ -269,12 +271,25 @@ namespace PointofSale
 
         private void btnInvoice_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            pnlInvoice.Visible = true;
+            pnlInvoice.BringToFront();
             string JobNo = lblSelectJob.Text;
-            RegisterQ qc = new RegisterQ(JobNo);
-            //SalesRegister qc = new SalesRegister(JobNo);
-            qc.MdiParent = this.ParentForm;
-            qc.Show();
+            if (JobNo != "")
+            {
+                RegisterQ regQ = new RegisterQ(JobNo);
+                regQ.TopLevel = false;
+                regQ.FormBorderStyle = FormBorderStyle.None;
+                regQ.Dock = DockStyle.Fill;
+                pnlInvoice.Controls.Add(regQ);
+                pnlInvoice.Tag = regQ;
+                regQ.BringToFront();
+                regQ.Show();
+                tabSRcontrol.SelectTab(tabPage3);
+            }
+            else
+            {
+                MessageBox.Show("Please Select Job to create Invoice");
+            }
         }
 
         private void btnFinished_Click(object sender, EventArgs e)
@@ -369,6 +384,7 @@ namespace PointofSale
             {
                 rdoStock.Checked = false;
             }
+            btnItemList.Visible = true;
         }
 
         private void rdoStock_CheckedChanged(object sender, EventArgs e)
@@ -377,6 +393,7 @@ namespace PointofSale
             {
                 rdoOutside.Checked = false;
             }
+            btnItemList.Visible = true;
         }
 
         private void kryptonButton1_Click_1(object sender, EventArgs e)
@@ -385,7 +402,8 @@ namespace PointofSale
             txtItemName.Text = txtOutsideItemName.Text.ToString();
             lblQty.Text = txtOutsideItemQty.Text.ToString();
             pnlOutside.Visible = false;
-            this.grdCategory.Rows.Add(lblItemNo.Text, txtItemName.Text, txtSellPrice.Text,lblQty.Text);
+            this.grdCategory.Rows.Add(lblItemNo.Text, txtItemName.Text, txtCost.Text,lblQty.Text);
+            
         }
 
         private void kryptonButton4_Click(object sender, EventArgs e)
@@ -471,6 +489,10 @@ namespace PointofSale
             string jobNo = row.Cells[0].Value.ToString();
             lblSelectJob.Text = jobNo;
             btnFinished.Enabled = true;
+            btnInvoice.Enabled = true;
+            dashboard dash = new dashboard();
+            dash.lblJobNo.Text = jobNo;
+            dash.btnInvoice.Visible = true;
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -493,6 +515,49 @@ namespace PointofSale
             string jobNo = row.Cells[0].Value.ToString();
             lblSelectJob.Text = jobNo;
             btnFinished.Enabled = true;
+            btnInvoice.Enabled = true;
+            dashboard dash = new dashboard();
+            dash.lblJobNo.Text = jobNo;
+            dash.btnInvoice.Visible = true;
+        }
+
+        private void kryptonButton6_Click_1(object sender, EventArgs e)
+        {
+            pnlService.Visible = true;
+            string ItemQuery = "SELECT [product_id],[product_name],[product_quantity],[retail_price] FROM [purchase] where [Category] = 'Service'";
+            DataTable dt = DAL.DataAccessManager.GetDataTable(ItemQuery);
+            grdServiceList.DataSource = dt;
+        }
+
+        private void kryptonButton7_Click(object sender, EventArgs e)
+        {
+            pnlService.Visible = false;
+        }
+
+        private void grdServiceList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = grdServiceList.Rows[e.RowIndex];
+                lblProID.Text = row.Cells[0].Value.ToString();
+                lblProName.Text = row.Cells[1].Value.ToString();
+                lblSelPrice.Text = row.Cells[3].Value.ToString();
+                //lbpaidamt.Text = row.Cells[4].Value.ToString();
+                //lbDueAmount.Text = row.Cells[6].Value.ToString();
+                //lbcontact.Text = row.Cells[9].Value.ToString();
+                //pnlReceiveDue.Visible = true;
+                this.grdCategory.Rows.Add(lblProID.Text, lblProName.Text, lblSelPrice.Text, "1");
+                pnlService.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
         }
     }
 }

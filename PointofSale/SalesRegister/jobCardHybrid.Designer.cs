@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.dtSalesDate = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
@@ -95,25 +97,29 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pnlService = new System.Windows.Forms.Panel();
+            this.kryptonButton7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.grdServiceList = new System.Windows.Forms.DataGridView();
             this.pnlOutside = new System.Windows.Forms.Panel();
+            this.txtCost = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label40 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
             this.txtOutsideItemQty = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.txtOutsideItemName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.txtOutsideItemNo = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label37 = new System.Windows.Forms.Label();
+            this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label42 = new System.Windows.Forms.Label();
             this.pnlItemStock = new System.Windows.Forms.Panel();
             this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.txtItemSearch = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.grdStockItem = new System.Windows.Forms.DataGridView();
             this.label36 = new System.Windows.Forms.Label();
             this.btnItemList = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnAddItem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.label35 = new System.Windows.Forms.Label();
-            this.txtSellPrice = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.rdoStock = new System.Windows.Forms.RadioButton();
             this.rdoOutside = new System.Windows.Forms.RadioButton();
             this.grdCategory = new System.Windows.Forms.DataGridView();
@@ -121,7 +127,6 @@
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SellingPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtItemName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtActionTaken = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -141,18 +146,23 @@
             this.lblSelectJob = new System.Windows.Forms.Label();
             this.dgrvSalesItemList = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.pnlInvoice = new System.Windows.Forms.Panel();
             this.btnNew = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblItemNo = new System.Windows.Forms.Label();
             this.lblQty = new System.Windows.Forms.Label();
             this.lblProID = new System.Windows.Forms.Label();
             this.lblProName = new System.Windows.Forms.Label();
             this.lblSelPrice = new System.Windows.Forms.Label();
-            this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.txtItemName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.tabSRcontrol.SuspendLayout();
             this.tabPageSR_Payment.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCustomer)).BeginInit();
             this.tabPage1.SuspendLayout();
+            this.pnlService.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdServiceList)).BeginInit();
             this.pnlOutside.SuspendLayout();
             this.pnlItemStock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdStockItem)).BeginInit();
@@ -161,6 +171,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbEmployee)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvSalesItemList)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -244,7 +255,7 @@
             // btnInvoice
             // 
             this.btnInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnInvoice.Location = new System.Drawing.Point(8, 515);
+            this.btnInvoice.Location = new System.Drawing.Point(8, 576);
             this.btnInvoice.Name = "btnInvoice";
             this.btnInvoice.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.btnInvoice.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -257,7 +268,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnInvoice.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.btnInvoice.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnInvoice.Size = new System.Drawing.Size(155, 43);
+            this.btnInvoice.Size = new System.Drawing.Size(281, 43);
             this.btnInvoice.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btnInvoice.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.btnInvoice.StateCommon.Back.ColorAngle = 45F;
@@ -297,13 +308,13 @@
             this.btnInvoice.StateTracking.Border.Rounding = 20;
             this.btnInvoice.StateTracking.Border.Width = 1;
             this.btnInvoice.TabIndex = 301;
-            this.btnInvoice.Values.Text = "Create Invoice";
+            this.btnInvoice.Values.Text = "Finish Job and Create Invoice";
             this.btnInvoice.Click += new System.EventHandler(this.btnInvoice_Click);
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(742, 623);
+            this.btnSave.Location = new System.Drawing.Point(740, 532);
             this.btnSave.Name = "btnSave";
             this.btnSave.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.btnSave.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -364,7 +375,7 @@
             // btnFinished
             // 
             this.btnFinished.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFinished.Location = new System.Drawing.Point(570, 515);
+            this.btnFinished.Location = new System.Drawing.Point(570, 576);
             this.btnFinished.Name = "btnFinished";
             this.btnFinished.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.btnFinished.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -423,7 +434,7 @@
             // btnSuspend
             // 
             this.btnSuspend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSuspend.Location = new System.Drawing.Point(731, 515);
+            this.btnSuspend.Location = new System.Drawing.Point(731, 576);
             this.btnSuspend.Name = "btnSuspend";
             this.btnSuspend.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.btnSuspend.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -487,11 +498,12 @@
             this.tabSRcontrol.Controls.Add(this.tabPageSR_Payment);
             this.tabSRcontrol.Controls.Add(this.tabPage1);
             this.tabSRcontrol.Controls.Add(this.tabPage2);
+            this.tabSRcontrol.Controls.Add(this.tabPage3);
             this.tabSRcontrol.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabSRcontrol.Location = new System.Drawing.Point(-2, 12);
+            this.tabSRcontrol.Location = new System.Drawing.Point(-2, -1);
             this.tabSRcontrol.Name = "tabSRcontrol";
             this.tabSRcontrol.SelectedIndex = 0;
-            this.tabSRcontrol.Size = new System.Drawing.Size(912, 605);
+            this.tabSRcontrol.Size = new System.Drawing.Size(912, 666);
             this.tabSRcontrol.TabIndex = 305;
             // 
             // tabPageSR_Payment
@@ -1276,17 +1288,16 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.pnlOutside);
+            this.tabPage1.Controls.Add(this.pnlService);
+            this.tabPage1.Controls.Add(this.kryptonButton6);
+            this.tabPage1.Controls.Add(this.label42);
             this.tabPage1.Controls.Add(this.pnlItemStock);
             this.tabPage1.Controls.Add(this.btnItemList);
-            this.tabPage1.Controls.Add(this.btnAddItem);
-            this.tabPage1.Controls.Add(this.label35);
-            this.tabPage1.Controls.Add(this.txtSellPrice);
             this.tabPage1.Controls.Add(this.rdoStock);
             this.tabPage1.Controls.Add(this.rdoOutside);
             this.tabPage1.Controls.Add(this.grdCategory);
-            this.tabPage1.Controls.Add(this.txtItemName);
             this.tabPage1.Controls.Add(this.label17);
+            this.tabPage1.Controls.Add(this.btnSave);
             this.tabPage1.Controls.Add(this.txtActionTaken);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.AssignTime2);
@@ -1304,32 +1315,162 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(904, 573);
+            this.tabPage1.Size = new System.Drawing.Size(904, 591);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Job Detail";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pnlService
+            // 
+            this.pnlService.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlService.Controls.Add(this.kryptonButton7);
+            this.pnlService.Controls.Add(this.grdServiceList);
+            this.pnlService.Controls.Add(this.pnlOutside);
+            this.pnlService.Location = new System.Drawing.Point(149, 159);
+            this.pnlService.Name = "pnlService";
+            this.pnlService.Size = new System.Drawing.Size(490, 356);
+            this.pnlService.TabIndex = 357;
+            // 
+            // kryptonButton7
+            // 
+            this.kryptonButton7.Location = new System.Drawing.Point(383, 303);
+            this.kryptonButton7.Name = "kryptonButton7";
+            this.kryptonButton7.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonButton7.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonButton7.OverrideDefault.Back.ColorAngle = 45F;
+            this.kryptonButton7.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton7.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton7.OverrideDefault.Border.ColorAngle = 45F;
+            this.kryptonButton7.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton7.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonButton7.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.kryptonButton7.Size = new System.Drawing.Size(94, 40);
+            this.kryptonButton7.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonButton7.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonButton7.StateCommon.Back.ColorAngle = 45F;
+            this.kryptonButton7.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton7.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton7.StateCommon.Border.ColorAngle = 45F;
+            this.kryptonButton7.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton7.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonButton7.StateCommon.Border.Rounding = 10;
+            this.kryptonButton7.StateCommon.Border.Width = 1;
+            this.kryptonButton7.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton7.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton7.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kryptonButton7.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kryptonButton7.StatePressed.Back.ColorAngle = 135F;
+            this.kryptonButton7.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kryptonButton7.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kryptonButton7.StatePressed.Border.ColorAngle = 135F;
+            this.kryptonButton7.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton7.StatePressed.Border.Rounding = 20;
+            this.kryptonButton7.StatePressed.Border.Width = 1;
+            this.kryptonButton7.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton7.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton7.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton7.StateTracking.Back.ColorAngle = 45F;
+            this.kryptonButton7.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton7.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton7.StateTracking.Border.ColorAngle = 45F;
+            this.kryptonButton7.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton7.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonButton7.StateTracking.Border.Rounding = 20;
+            this.kryptonButton7.StateTracking.Border.Width = 1;
+            this.kryptonButton7.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton7.TabIndex = 356;
+            this.kryptonButton7.Values.Text = "Close";
+            this.kryptonButton7.Click += new System.EventHandler(this.kryptonButton7_Click);
+            // 
+            // grdServiceList
+            // 
+            this.grdServiceList.AllowUserToResizeRows = false;
+            this.grdServiceList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdServiceList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdServiceList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.grdServiceList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdServiceList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.grdServiceList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdServiceList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            this.grdServiceList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdServiceList.DefaultCellStyle = dataGridViewCellStyle24;
+            this.grdServiceList.EnableHeadersVisualStyles = false;
+            this.grdServiceList.Location = new System.Drawing.Point(10, 13);
+            this.grdServiceList.Name = "grdServiceList";
+            this.grdServiceList.ReadOnly = true;
+            this.grdServiceList.RowHeadersVisible = false;
+            this.grdServiceList.RowTemplate.Height = 35;
+            this.grdServiceList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdServiceList.Size = new System.Drawing.Size(467, 284);
+            this.grdServiceList.TabIndex = 350;
+            this.grdServiceList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdServiceList_CellContentClick);
+            // 
             // pnlOutside
             // 
             this.pnlOutside.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlOutside.Controls.Add(this.txtCost);
             this.pnlOutside.Controls.Add(this.kryptonButton3);
             this.pnlOutside.Controls.Add(this.kryptonButton1);
             this.pnlOutside.Controls.Add(this.label40);
+            this.pnlOutside.Controls.Add(this.label35);
             this.pnlOutside.Controls.Add(this.txtOutsideItemQty);
             this.pnlOutside.Controls.Add(this.label39);
             this.pnlOutside.Controls.Add(this.txtOutsideItemName);
             this.pnlOutside.Controls.Add(this.label38);
             this.pnlOutside.Controls.Add(this.txtOutsideItemNo);
             this.pnlOutside.Controls.Add(this.label37);
-            this.pnlOutside.Location = new System.Drawing.Point(360, 232);
+            this.pnlOutside.Location = new System.Drawing.Point(253, 33);
             this.pnlOutside.Name = "pnlOutside";
             this.pnlOutside.Size = new System.Drawing.Size(433, 267);
             this.pnlOutside.TabIndex = 351;
             this.pnlOutside.Visible = false;
             // 
+            // txtCost
+            // 
+            this.txtCost.Location = new System.Drawing.Point(123, 167);
+            this.txtCost.Name = "txtCost";
+            this.txtCost.Size = new System.Drawing.Size(279, 37);
+            this.txtCost.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtCost.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtCost.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtCost.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtCost.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtCost.StateCommon.Border.Rounding = 20;
+            this.txtCost.StateCommon.Border.Width = 1;
+            this.txtCost.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtCost.StateCommon.Content.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCost.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtCost.TabIndex = 349;
+            // 
             // kryptonButton3
             // 
-            this.kryptonButton3.Location = new System.Drawing.Point(208, 189);
+            this.kryptonButton3.Location = new System.Drawing.Point(208, 217);
             this.kryptonButton3.Name = "kryptonButton3";
             this.kryptonButton3.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.kryptonButton3.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -1388,7 +1529,7 @@
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(308, 189);
+            this.kryptonButton1.Location = new System.Drawing.Point(308, 217);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.kryptonButton1.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -1450,15 +1591,26 @@
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label40.Location = new System.Drawing.Point(23, 148);
+            this.label40.Location = new System.Drawing.Point(23, 130);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(37, 26);
             this.label40.TabIndex = 354;
             this.label40.Text = "Qty";
             // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label35.Location = new System.Drawing.Point(23, 173);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(47, 26);
+            this.label35.TabIndex = 346;
+            this.label35.Text = "Cost";
+            // 
             // txtOutsideItemQty
             // 
-            this.txtOutsideItemQty.Location = new System.Drawing.Point(123, 142);
+            this.txtOutsideItemQty.Location = new System.Drawing.Point(123, 124);
             this.txtOutsideItemQty.Name = "txtOutsideItemQty";
             this.txtOutsideItemQty.Size = new System.Drawing.Size(279, 37);
             this.txtOutsideItemQty.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -1480,7 +1632,7 @@
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label39.Location = new System.Drawing.Point(23, 96);
+            this.label39.Location = new System.Drawing.Point(23, 85);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(94, 26);
             this.label39.TabIndex = 352;
@@ -1488,7 +1640,7 @@
             // 
             // txtOutsideItemName
             // 
-            this.txtOutsideItemName.Location = new System.Drawing.Point(123, 90);
+            this.txtOutsideItemName.Location = new System.Drawing.Point(123, 79);
             this.txtOutsideItemName.Name = "txtOutsideItemName";
             this.txtOutsideItemName.Size = new System.Drawing.Size(279, 37);
             this.txtOutsideItemName.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -1510,7 +1662,7 @@
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label38.Location = new System.Drawing.Point(23, 54);
+            this.label38.Location = new System.Drawing.Point(23, 43);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(70, 26);
             this.label38.TabIndex = 350;
@@ -1518,7 +1670,7 @@
             // 
             // txtOutsideItemNo
             // 
-            this.txtOutsideItemNo.Location = new System.Drawing.Point(123, 48);
+            this.txtOutsideItemNo.Location = new System.Drawing.Point(123, 37);
             this.txtOutsideItemNo.Name = "txtOutsideItemNo";
             this.txtOutsideItemNo.Size = new System.Drawing.Size(279, 37);
             this.txtOutsideItemNo.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -1540,11 +1692,81 @@
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label37.Location = new System.Drawing.Point(4, 11);
+            this.label37.Location = new System.Drawing.Point(4, 5);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(113, 26);
             this.label37.TabIndex = 349;
             this.label37.Text = "From Outside";
+            // 
+            // kryptonButton6
+            // 
+            this.kryptonButton6.Location = new System.Drawing.Point(82, 256);
+            this.kryptonButton6.Name = "kryptonButton6";
+            this.kryptonButton6.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonButton6.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonButton6.OverrideDefault.Back.ColorAngle = 45F;
+            this.kryptonButton6.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton6.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton6.OverrideDefault.Border.ColorAngle = 45F;
+            this.kryptonButton6.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton6.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonButton6.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.kryptonButton6.Size = new System.Drawing.Size(59, 40);
+            this.kryptonButton6.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonButton6.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonButton6.StateCommon.Back.ColorAngle = 45F;
+            this.kryptonButton6.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton6.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton6.StateCommon.Border.ColorAngle = 45F;
+            this.kryptonButton6.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton6.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonButton6.StateCommon.Border.Rounding = 10;
+            this.kryptonButton6.StateCommon.Border.Width = 1;
+            this.kryptonButton6.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton6.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton6.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kryptonButton6.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kryptonButton6.StatePressed.Back.ColorAngle = 135F;
+            this.kryptonButton6.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kryptonButton6.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kryptonButton6.StatePressed.Border.ColorAngle = 135F;
+            this.kryptonButton6.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton6.StatePressed.Border.Rounding = 20;
+            this.kryptonButton6.StatePressed.Border.Width = 1;
+            this.kryptonButton6.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton6.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton6.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton6.StateTracking.Back.ColorAngle = 45F;
+            this.kryptonButton6.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton6.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton6.StateTracking.Border.ColorAngle = 45F;
+            this.kryptonButton6.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton6.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonButton6.StateTracking.Border.Rounding = 20;
+            this.kryptonButton6.StateTracking.Border.Width = 1;
+            this.kryptonButton6.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton6.TabIndex = 353;
+            this.kryptonButton6.Values.Text = "...";
+            this.kryptonButton6.Click += new System.EventHandler(this.kryptonButton6_Click_1);
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label42.Location = new System.Drawing.Point(10, 265);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(66, 26);
+            this.label42.TabIndex = 352;
+            this.label42.Text = "Service";
             // 
             // pnlItemStock
             // 
@@ -1553,7 +1775,7 @@
             this.pnlItemStock.Controls.Add(this.txtItemSearch);
             this.pnlItemStock.Controls.Add(this.grdStockItem);
             this.pnlItemStock.Controls.Add(this.label36);
-            this.pnlItemStock.Location = new System.Drawing.Point(396, 150);
+            this.pnlItemStock.Location = new System.Drawing.Point(405, 110);
             this.pnlItemStock.Name = "pnlItemStock";
             this.pnlItemStock.Size = new System.Drawing.Size(490, 416);
             this.pnlItemStock.TabIndex = 348;
@@ -1648,23 +1870,23 @@
             this.grdStockItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdStockItem.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.grdStockItem.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdStockItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdStockItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.grdStockItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdStockItem.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdStockItem.DefaultCellStyle = dataGridViewCellStyle26;
             this.grdStockItem.EnableHeadersVisualStyles = false;
             this.grdStockItem.Location = new System.Drawing.Point(8, 51);
             this.grdStockItem.Name = "grdStockItem";
@@ -1690,7 +1912,7 @@
             // 
             // btnItemList
             // 
-            this.btnItemList.Location = new System.Drawing.Point(295, 329);
+            this.btnItemList.Location = new System.Drawing.Point(446, 326);
             this.btnItemList.Name = "btnItemList";
             this.btnItemList.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.btnItemList.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -1747,99 +1969,11 @@
             this.btnItemList.Values.Text = "...";
             this.btnItemList.Click += new System.EventHandler(this.btnItemList_Click);
             // 
-            // btnAddItem
-            // 
-            this.btnAddItem.Location = new System.Drawing.Point(626, 326);
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.btnAddItem.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.btnAddItem.OverrideDefault.Back.ColorAngle = 45F;
-            this.btnAddItem.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btnAddItem.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btnAddItem.OverrideDefault.Border.ColorAngle = 45F;
-            this.btnAddItem.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAddItem.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnAddItem.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnAddItem.Size = new System.Drawing.Size(110, 43);
-            this.btnAddItem.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.btnAddItem.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.btnAddItem.StateCommon.Back.ColorAngle = 45F;
-            this.btnAddItem.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btnAddItem.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btnAddItem.StateCommon.Border.ColorAngle = 45F;
-            this.btnAddItem.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAddItem.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnAddItem.StateCommon.Border.Rounding = 20;
-            this.btnAddItem.StateCommon.Border.Width = 1;
-            this.btnAddItem.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btnAddItem.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddItem.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.btnAddItem.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.btnAddItem.StatePressed.Back.ColorAngle = 135F;
-            this.btnAddItem.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.btnAddItem.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.btnAddItem.StatePressed.Border.ColorAngle = 135F;
-            this.btnAddItem.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAddItem.StatePressed.Border.Rounding = 20;
-            this.btnAddItem.StatePressed.Border.Width = 1;
-            this.btnAddItem.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnAddItem.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btnAddItem.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btnAddItem.StateTracking.Back.ColorAngle = 45F;
-            this.btnAddItem.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btnAddItem.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btnAddItem.StateTracking.Border.ColorAngle = 45F;
-            this.btnAddItem.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAddItem.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnAddItem.StateTracking.Border.Rounding = 20;
-            this.btnAddItem.StateTracking.Border.Width = 1;
-            this.btnAddItem.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnAddItem.TabIndex = 314;
-            this.btnAddItem.Values.Text = "Add";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label35.Location = new System.Drawing.Point(407, 336);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(47, 26);
-            this.label35.TabIndex = 346;
-            this.label35.Text = "Cost";
-            // 
-            // txtSellPrice
-            // 
-            this.txtSellPrice.Location = new System.Drawing.Point(460, 329);
-            this.txtSellPrice.Name = "txtSellPrice";
-            this.txtSellPrice.Size = new System.Drawing.Size(160, 37);
-            this.txtSellPrice.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtSellPrice.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtSellPrice.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtSellPrice.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtSellPrice.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtSellPrice.StateCommon.Border.Rounding = 20;
-            this.txtSellPrice.StateCommon.Border.Width = 1;
-            this.txtSellPrice.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtSellPrice.StateCommon.Content.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSellPrice.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtSellPrice.TabIndex = 345;
-            // 
             // rdoStock
             // 
             this.rdoStock.AutoSize = true;
             this.rdoStock.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.rdoStock.Location = new System.Drawing.Point(362, 298);
+            this.rdoStock.Location = new System.Drawing.Point(335, 305);
             this.rdoStock.Name = "rdoStock";
             this.rdoStock.Size = new System.Drawing.Size(102, 30);
             this.rdoStock.TabIndex = 344;
@@ -1852,7 +1986,7 @@
             // 
             this.rdoOutside.AutoSize = true;
             this.rdoOutside.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.rdoOutside.Location = new System.Drawing.Point(170, 298);
+            this.rdoOutside.Location = new System.Drawing.Point(149, 306);
             this.rdoOutside.Name = "rdoOutside";
             this.rdoOutside.Size = new System.Drawing.Size(168, 30);
             this.rdoOutside.TabIndex = 343;
@@ -1872,35 +2006,35 @@
             this.grdCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdCategory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.grdCategory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.grdCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductID,
             this.ProductName,
             this.SellingPrice,
             this.Qty});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdCategory.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdCategory.DefaultCellStyle = dataGridViewCellStyle28;
             this.grdCategory.EnableHeadersVisualStyles = false;
-            this.grdCategory.Location = new System.Drawing.Point(10, 372);
+            this.grdCategory.Location = new System.Drawing.Point(10, 336);
             this.grdCategory.Name = "grdCategory";
             this.grdCategory.RowHeadersVisible = false;
             this.grdCategory.RowTemplate.Height = 35;
             this.grdCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdCategory.Size = new System.Drawing.Size(885, 195);
+            this.grdCategory.Size = new System.Drawing.Size(885, 167);
             this.grdCategory.TabIndex = 342;
             // 
             // ProductID
@@ -1923,32 +2057,12 @@
             this.Qty.HeaderText = "Qty";
             this.Qty.Name = "Qty";
             // 
-            // txtItemName
-            // 
-            this.txtItemName.Enabled = false;
-            this.txtItemName.Location = new System.Drawing.Point(10, 329);
-            this.txtItemName.Name = "txtItemName";
-            this.txtItemName.Size = new System.Drawing.Size(279, 37);
-            this.txtItemName.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtItemName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtItemName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtItemName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtItemName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtItemName.StateCommon.Border.Rounding = 20;
-            this.txtItemName.StateCommon.Border.Width = 1;
-            this.txtItemName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtItemName.StateCommon.Content.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtItemName.TabIndex = 335;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label17.Location = new System.Drawing.Point(10, 300);
+            this.label17.Location = new System.Drawing.Point(10, 308);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(114, 26);
             this.label17.TabIndex = 334;
@@ -1959,7 +2073,7 @@
             this.txtActionTaken.Location = new System.Drawing.Point(15, 184);
             this.txtActionTaken.Multiline = true;
             this.txtActionTaken.Name = "txtActionTaken";
-            this.txtActionTaken.Size = new System.Drawing.Size(754, 106);
+            this.txtActionTaken.Size = new System.Drawing.Size(754, 67);
             this.txtActionTaken.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtActionTaken.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtActionTaken.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -2155,16 +2269,18 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.linkLabel2);
             this.tabPage2.Controls.Add(this.lblSelectJob);
             this.tabPage2.Controls.Add(this.dgrvSalesItemList);
             this.tabPage2.Controls.Add(this.btnSuspend);
             this.tabPage2.Controls.Add(this.btnInvoice);
             this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.btnNew);
             this.tabPage2.Controls.Add(this.btnFinished);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(904, 573);
+            this.tabPage2.Size = new System.Drawing.Size(904, 634);
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "Current Jobs";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -2191,14 +2307,14 @@
             this.dgrvSalesItemList.BackgroundColor = System.Drawing.Color.White;
             this.dgrvSalesItemList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgrvSalesItemList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgrvSalesItemList.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgrvSalesItemList.DefaultCellStyle = dataGridViewCellStyle22;
             this.dgrvSalesItemList.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgrvSalesItemList.Location = new System.Drawing.Point(8, 47);
             this.dgrvSalesItemList.Name = "dgrvSalesItemList";
@@ -2220,9 +2336,30 @@
             this.label5.TabIndex = 279;
             this.label5.Text = "Current Job Details";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.pnlInvoice);
+            this.tabPage3.Location = new System.Drawing.Point(4, 28);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(904, 634);
+            this.tabPage3.TabIndex = 4;
+            this.tabPage3.Text = "Invoice";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // pnlInvoice
+            // 
+            this.pnlInvoice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlInvoice.Location = new System.Drawing.Point(3, 3);
+            this.pnlInvoice.Name = "pnlInvoice";
+            this.pnlInvoice.Size = new System.Drawing.Size(898, 628);
+            this.pnlInvoice.TabIndex = 0;
+            this.pnlInvoice.Visible = false;
+            // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(4, 623);
+            this.btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNew.Location = new System.Drawing.Point(409, 576);
             this.btnNew.Name = "btnNew";
             this.btnNew.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.btnNew.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -2283,7 +2420,7 @@
             this.lblItemNo.AutoSize = true;
             this.lblItemNo.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblItemNo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblItemNo.Location = new System.Drawing.Point(178, 633);
+            this.lblItemNo.Location = new System.Drawing.Point(178, 638);
             this.lblItemNo.Name = "lblItemNo";
             this.lblItemNo.Size = new System.Drawing.Size(113, 26);
             this.lblItemNo.TabIndex = 355;
@@ -2296,7 +2433,7 @@
             this.lblQty.AutoSize = true;
             this.lblQty.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQty.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblQty.Location = new System.Drawing.Point(319, 633);
+            this.lblQty.Location = new System.Drawing.Point(319, 638);
             this.lblQty.Name = "lblQty";
             this.lblQty.Size = new System.Drawing.Size(37, 26);
             this.lblQty.TabIndex = 355;
@@ -2308,7 +2445,7 @@
             this.lblProID.AutoSize = true;
             this.lblProID.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProID.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblProID.Location = new System.Drawing.Point(381, 633);
+            this.lblProID.Location = new System.Drawing.Point(381, 638);
             this.lblProID.Name = "lblProID";
             this.lblProID.Size = new System.Drawing.Size(53, 26);
             this.lblProID.TabIndex = 356;
@@ -2320,7 +2457,7 @@
             this.lblProName.AutoSize = true;
             this.lblProName.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblProName.Location = new System.Drawing.Point(440, 633);
+            this.lblProName.Location = new System.Drawing.Point(440, 638);
             this.lblProName.Name = "lblProName";
             this.lblProName.Size = new System.Drawing.Size(57, 26);
             this.lblProName.TabIndex = 357;
@@ -2332,71 +2469,44 @@
             this.lblSelPrice.AutoSize = true;
             this.lblSelPrice.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelPrice.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblSelPrice.Location = new System.Drawing.Point(503, 633);
+            this.lblSelPrice.Location = new System.Drawing.Point(503, 638);
             this.lblSelPrice.Name = "lblSelPrice";
             this.lblSelPrice.Size = new System.Drawing.Size(50, 26);
             this.lblSelPrice.TabIndex = 358;
             this.lblSelPrice.Text = "price";
             this.lblSelPrice.Visible = false;
             // 
-            // kryptonButton5
+            // txtItemName
             // 
-            this.kryptonButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.kryptonButton5.Location = new System.Drawing.Point(581, 623);
-            this.kryptonButton5.Name = "kryptonButton5";
-            this.kryptonButton5.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.kryptonButton5.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton5.OverrideDefault.Back.ColorAngle = 45F;
-            this.kryptonButton5.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton5.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.kryptonButton5.OverrideDefault.Border.ColorAngle = 45F;
-            this.kryptonButton5.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtItemName.Location = new System.Drawing.Point(274, 628);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(279, 37);
+            this.txtItemName.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtItemName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtItemName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtItemName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton5.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonButton5.Size = new System.Drawing.Size(155, 43);
-            this.kryptonButton5.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton5.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.kryptonButton5.StateCommon.Back.ColorAngle = 45F;
-            this.kryptonButton5.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton5.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.kryptonButton5.StateCommon.Border.ColorAngle = 45F;
-            this.kryptonButton5.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton5.StateCommon.Border.Rounding = 20;
-            this.kryptonButton5.StateCommon.Border.Width = 1;
-            this.kryptonButton5.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton5.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton5.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton5.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.kryptonButton5.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.kryptonButton5.StatePressed.Back.ColorAngle = 135F;
-            this.kryptonButton5.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.kryptonButton5.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.kryptonButton5.StatePressed.Border.ColorAngle = 135F;
-            this.kryptonButton5.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.StatePressed.Border.Rounding = 20;
-            this.kryptonButton5.StatePressed.Border.Width = 1;
-            this.kryptonButton5.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.kryptonButton5.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton5.StateTracking.Back.ColorAngle = 45F;
-            this.kryptonButton5.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton5.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.kryptonButton5.StateTracking.Border.ColorAngle = 45F;
-            this.kryptonButton5.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton5.StateTracking.Border.Rounding = 20;
-            this.kryptonButton5.StateTracking.Border.Width = 1;
-            this.kryptonButton5.TabIndex = 359;
-            this.kryptonButton5.Values.Text = "Close";
-            this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click_1);
+            this.txtItemName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtItemName.StateCommon.Border.Rounding = 20;
+            this.txtItemName.StateCommon.Border.Width = 1;
+            this.txtItemName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtItemName.StateCommon.Content.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtItemName.TabIndex = 357;
+            this.txtItemName.Visible = false;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.Location = new System.Drawing.Point(841, 23);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(40, 19);
+            this.linkLabel2.TabIndex = 308;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Close";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // jobCardHybrid
             // 
@@ -2404,15 +2514,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(909, 668);
-            this.Controls.Add(this.kryptonButton5);
+            this.Controls.Add(this.tabSRcontrol);
+            this.Controls.Add(this.txtItemName);
             this.Controls.Add(this.lblSelPrice);
             this.Controls.Add(this.lblProName);
             this.Controls.Add(this.lblProID);
             this.Controls.Add(this.lblQty);
             this.Controls.Add(this.lblItemNo);
-            this.Controls.Add(this.btnNew);
-            this.Controls.Add(this.tabSRcontrol);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dtSalesDate);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label19);
@@ -2431,6 +2539,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbCustomer)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.pnlService.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdServiceList)).EndInit();
             this.pnlOutside.ResumeLayout(false);
             this.pnlOutside.PerformLayout();
             this.pnlItemStock.ResumeLayout(false);
@@ -2442,6 +2552,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvSalesItemList)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2524,13 +2635,10 @@
         private System.Windows.Forms.Label label14;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker AssignTime1;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker AssignDt1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtItemName;
         private System.Windows.Forms.Label label17;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtActionTaken;
         private System.Windows.Forms.Label label15;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAddItem;
         private System.Windows.Forms.Label label35;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSellPrice;
         private System.Windows.Forms.RadioButton rdoStock;
         private System.Windows.Forms.RadioButton rdoOutside;
         private System.Windows.Forms.DataGridView grdCategory;
@@ -2561,8 +2669,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SellingPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;
         private System.Windows.Forms.Label lblSelectJob;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtCost;
+        private System.Windows.Forms.TabPage tabPage3;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton6;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Panel pnlService;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton7;
+        private System.Windows.Forms.DataGridView grdServiceList;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtItemName;
+        public System.Windows.Forms.Panel pnlInvoice;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
 

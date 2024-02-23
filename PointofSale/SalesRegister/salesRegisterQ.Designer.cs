@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnPrintDirect = new System.Windows.Forms.Button();
@@ -163,13 +163,14 @@
             // 
             // btnPrintDirect
             // 
+            this.btnPrintDirect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnPrintDirect.BackColor = System.Drawing.Color.SpringGreen;
             this.btnPrintDirect.Enabled = false;
             this.btnPrintDirect.FlatAppearance.BorderSize = 0;
             this.btnPrintDirect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrintDirect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintDirect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnPrintDirect.Location = new System.Drawing.Point(260, 522);
+            this.btnPrintDirect.Location = new System.Drawing.Point(260, 530);
             this.btnPrintDirect.Name = "btnPrintDirect";
             this.btnPrintDirect.Size = new System.Drawing.Size(125, 56);
             this.btnPrintDirect.TabIndex = 198;
@@ -181,13 +182,14 @@
             // 
             // btnSaveOnly
             // 
+            this.btnSaveOnly.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSaveOnly.BackColor = System.Drawing.Color.SlateBlue;
             this.btnSaveOnly.Enabled = false;
             this.btnSaveOnly.FlatAppearance.BorderSize = 0;
             this.btnSaveOnly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveOnly.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveOnly.ForeColor = System.Drawing.Color.Tan;
-            this.btnSaveOnly.Location = new System.Drawing.Point(90, 522);
+            this.btnSaveOnly.Location = new System.Drawing.Point(90, 530);
             this.btnSaveOnly.Name = "btnSaveOnly";
             this.btnSaveOnly.Size = new System.Drawing.Size(87, 56);
             this.btnSaveOnly.TabIndex = 197;
@@ -198,13 +200,14 @@
             // 
             // btnCompleteSalesAndPrint
             // 
+            this.btnCompleteSalesAndPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCompleteSalesAndPrint.BackColor = System.Drawing.Color.SpringGreen;
             this.btnCompleteSalesAndPrint.Enabled = false;
             this.btnCompleteSalesAndPrint.FlatAppearance.BorderSize = 0;
             this.btnCompleteSalesAndPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompleteSalesAndPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompleteSalesAndPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCompleteSalesAndPrint.Location = new System.Drawing.Point(183, 522);
+            this.btnCompleteSalesAndPrint.Location = new System.Drawing.Point(183, 530);
             this.btnCompleteSalesAndPrint.Name = "btnCompleteSalesAndPrint";
             this.btnCompleteSalesAndPrint.Size = new System.Drawing.Size(73, 56);
             this.btnCompleteSalesAndPrint.TabIndex = 196;
@@ -355,13 +358,14 @@
             // 
             // btnPayment
             // 
+            this.btnPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnPayment.BackColor = System.Drawing.Color.Goldenrod;
             this.btnPayment.Enabled = false;
             this.btnPayment.FlatAppearance.BorderSize = 0;
             this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPayment.Font = new System.Drawing.Font("Trebuchet MS", 11.75F, System.Drawing.FontStyle.Bold);
             this.btnPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPayment.Location = new System.Drawing.Point(6, 522);
+            this.btnPayment.Location = new System.Drawing.Point(6, 530);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(81, 56);
             this.btnPayment.TabIndex = 152;
@@ -371,13 +375,14 @@
             // 
             // btnSuspend
             // 
+            this.btnSuspend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSuspend.BackColor = System.Drawing.Color.OrangeRed;
             this.btnSuspend.Enabled = false;
             this.btnSuspend.FlatAppearance.BorderSize = 0;
             this.btnSuspend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuspend.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuspend.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnSuspend.Location = new System.Drawing.Point(390, 522);
+            this.btnSuspend.Location = new System.Drawing.Point(390, 530);
             this.btnSuspend.Name = "btnSuspend";
             this.btnSuspend.Size = new System.Drawing.Size(95, 56);
             this.btnSuspend.TabIndex = 153;
@@ -703,21 +708,21 @@
             this.dgrvSalesItemList.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dgrvSalesItemList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgrvSalesItemList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgrvSalesItemList.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgrvSalesItemList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgrvSalesItemList.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgrvSalesItemList.Location = new System.Drawing.Point(0, 0);
             this.dgrvSalesItemList.Name = "dgrvSalesItemList";
             this.dgrvSalesItemList.RowHeadersVisible = false;
             this.dgrvSalesItemList.RowTemplate.Height = 30;
             this.dgrvSalesItemList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgrvSalesItemList.Size = new System.Drawing.Size(479, 264);
+            this.dgrvSalesItemList.Size = new System.Drawing.Size(479, 255);
             this.dgrvSalesItemList.TabIndex = 94;
             this.dgrvSalesItemList.Visible = false;
             // 
@@ -756,9 +761,9 @@
             this.panel3.Controls.Add(this.lblTotalVAT);
             this.panel3.Controls.Add(this.lblTotalDisCount);
             this.panel3.Controls.Add(this.txtDiscountRate);
-            this.panel3.Location = new System.Drawing.Point(6, 327);
+            this.panel3.Location = new System.Drawing.Point(6, 324);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(479, 189);
+            this.panel3.Size = new System.Drawing.Size(479, 192);
             this.panel3.TabIndex = 149;
             // 
             // label3

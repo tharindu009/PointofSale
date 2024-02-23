@@ -709,36 +709,213 @@ namespace PointofSale
                 //Bind Items
                 try
                 {
-                    string dataDS = "SELECT JobNo,EngineOil,GearOil,OilFilter,AirFilter,FuelFilter,ATFFilter,CabinFilter,VehicleNo,DiffOil,Customer,Mileage FROM job_card where JobNo = '" + CurrentJobNo + "'";
+                    //Get Job Details
+                    string JobMaster = "SELECT [JobNo],[CustomerName],[VehicleReg],[CurrentMilage],[DateIn],[ActionTaken],[Status] FROM[kts].[dbo].[JobHybridMaster] where JobNo = '"+ CurrentJobNo + "'";
+                    DataSet JobMasterDS = DAL.DataAccessManager.GetDataSet(JobMaster);
 
-                    DataSet ds = DAL.DataAccessManager.GetDataSet(dataDS);
+                    label8.Text = JobMasterDS.Tables[0].Rows[0][2].ToString();//Vehicle no
+                    ComboCustID.Text = JobMasterDS.Tables[0].Rows[0][1].ToString();//Customer
+                    label19.Text = JobMasterDS.Tables[0].Rows[0][0].ToString();//Job no
+                    label14.Text = JobMasterDS.Tables[0].Rows[0][3].ToString();//Milage
 
-                    int rows = ds.Tables[0].Rows.Count;
+                    //Bind Service
+                    string Detail = "SELECT [JobNo],[HybridSystem],[Engine],[GearBox],[BreakSystem],[DashBoard],[Battery12v],[FuseBox],[Oil],[Electrical],[Sound],[Belts],[Coolant],[Alternator]"+
+                                    ",[Shock],[OtherIssues],[jobDetailID] FROM[kts].[dbo].[JobHybridDetail] WHERE JobNo = '"+ CurrentJobNo + "'";
 
-                    if (rows > 0)
+                    DataSet DetailDS = DAL.DataAccessManager.GetDataSet(Detail);
+
+                    if(DetailDS.Tables[0].Rows.Count !=0)
                     {
-                        string EngineOil = ds.Tables[0].Rows[0][1].ToString();
-                        string GearOil = ds.Tables[0].Rows[0][2].ToString();
-                        string OilFilter = ds.Tables[0].Rows[0][3].ToString();
-                        string AirFilter = ds.Tables[0].Rows[0][4].ToString();
-                        string FuelFilter = ds.Tables[0].Rows[0][5].ToString();
-                        string AtfFilter = ds.Tables[0].Rows[0][6].ToString();
-                        string CabinFilter = ds.Tables[0].Rows[0][7].ToString();
-                        string DiffOil = ds.Tables[0].Rows[0][9].ToString();
+                        string HybridSystem = DetailDS.Tables[0].Rows[0][1].ToString();
+                        string Engine = DetailDS.Tables[0].Rows[0][2].ToString();
+                        string GearBox = DetailDS.Tables[0].Rows[0][3].ToString();
+                        string BreakSystem = DetailDS.Tables[0].Rows[0][4].ToString();
+                        string Dashboard = DetailDS.Tables[0].Rows[0][5].ToString();
+                        string Battery12 = DetailDS.Tables[0].Rows[0][6].ToString();
+                        string FuseBox = DetailDS.Tables[0].Rows[0][7].ToString();
+                        string Oil = DetailDS.Tables[0].Rows[0][8].ToString();
+                        string Electrical = DetailDS.Tables[0].Rows[0][9].ToString();
+                        string Sound = DetailDS.Tables[0].Rows[0][10].ToString();
+                        string Belt = DetailDS.Tables[0].Rows[0][11].ToString();
+                        string Coolent = DetailDS.Tables[0].Rows[0][12].ToString();
+                        string Alternator = DetailDS.Tables[0].Rows[0][13].ToString();
+                        string shock = DetailDS.Tables[0].Rows[0][14].ToString();
 
 
-
-
-                        label8.Text = ds.Tables[0].Rows[0][8].ToString();//Vehicle no
-                        ComboCustID.Text = ds.Tables[0].Rows[0][10].ToString();//Customer
-                        label19.Text = ds.Tables[0].Rows[0][0].ToString();//Job no
-                        label14.Text = ds.Tables[0].Rows[0][11].ToString();//Milage
+                        if (HybridSystem == "Yes")
+                        {
+                            //BindItemJobCard();
+                        }
                     }
+
+
+                    //Bind Items
+                    string ItemQuery = "SELECT [JobItemID],[JobNo],[ReplaceItemNo],[Qty],[Cost],[ItemLocation] FROM[kts].[dbo].[JobCardItems] WHERE JobNo = '"+ CurrentJobNo + "'";
+                    DataSet JobItemDS = DAL.DataAccessManager.GetDataSet(ItemQuery);
+
+                    int rows = JobItemDS.Tables[0].Rows.Count;
+                    for(int i =0;i<=rows;i++)
+                    {
+                        string ItemNo = JobItemDS.Tables[0].Rows[i][2].ToString();
+                        int Qty = Convert.ToInt32(JobItemDS.Tables[0].Rows[i][3].ToString());
+                        string Location = JobItemDS.Tables[0].Rows[i][5].ToString();
+                        string Price = JobItemDS.Tables[0].Rows[i][4].ToString();
+
+                        if (Location == "InHouse Stock")
+                        {
+                            if(Qty>1)
+                            {
+                                for(int j=1;j<Qty;j++)
+                                {
+                                    BindItemJobCard(ItemNo);
+                                }
+                            }
+                            else
+                            {
+                                BindItemJobCard(ItemNo);
+                            }
+                        }
+                        else
+                        {
+                            dgrvSalesItemList.Rows.Add(ItemNo, Price, Qty, Price, ItemNo, "0", "0", "0", "0", "1");
+                        }
+                    }
+                    
                 }
                 catch (Exception ex)
                 {
 
                 }
+            }
+        }
+
+
+        private string GetServiceItemNo(string service)
+        {
+            string ItemNo = "";
+
+            return ItemNo;
+        }
+
+        //Bind Job Card Items
+        private void BindItemJobCard(string ItemID)
+        {
+            try
+            {
+                dgrvSalesItemList.Visible = true;
+                // Default tax rate 
+                double Taxrate = Convert.ToDouble(vatdisvalue.vat);
+
+                //- new in 8.1 version // Default Product QTY is 1
+                string sql = "SELECT  product_name as Name , retail_price as Price , 1.00  as QTY, (retail_price * 1.00 ) * 1.00  as 'Total' ,  " +
+                        " (((retail_price * 1.00 ) * discount) / 100.00) as 'dis amt' , " +
+                        " CASE     " +
+                        " WHEN taxapply = 1 THEN   (((retail_price * 1.00 )  - (((retail_price * 1.00 ) * discount) / 100.00))  * " + Taxrate + " ) / 100.00   " +
+                        " ELSE '0.00'  " +
+                        " END 'taxamt' , product_id as ID , discount , taxapply, status, product_quantity  " +
+                        " FROM  purchase  where product_id = '" + ItemID + "'  and product_quantity >= 1 ";
+                DAL.DataAccessManager.ExecuteSQL(sql);
+                DataTable dt = DAL.DataAccessManager.GetDataTable(sql);
+
+                string ItemsName = dt.Rows[0].ItemArray[0].ToString();
+                double Rprice = Convert.ToDouble(dt.Rows[0].ItemArray[1].ToString());
+                double Qty = Convert.ToDouble(dt.Rows[0].ItemArray[2].ToString());
+                double Total = Convert.ToDouble(dt.Rows[0].ItemArray[3].ToString()) * Qty;
+                string Itemid = dt.Rows[0].ItemArray[6].ToString();
+                double Disamt = Convert.ToDouble(dt.Rows[0].ItemArray[4].ToString());       //  Total Discount amount of this item
+                double Taxamt = Convert.ToDouble(dt.Rows[0].ItemArray[5].ToString());       //  Total Tax amount  of this item
+                double Dis = Convert.ToDouble(dt.Rows[0].ItemArray[7].ToString());       //  Discount Rate
+                double Taxapply = Convert.ToDouble(dt.Rows[0].ItemArray[8].ToString());       //  VAT/TAX/TPS/TVQ apply or not
+                int kitchendisplay = Convert.ToInt32(dt.Rows[0].ItemArray[9].ToString());        //  kitchen display 3= show 1= not display in kitchen 
+                double Stockqty = Convert.ToDouble(dt.Rows[0].ItemArray[10].ToString());        // 
+
+                //Add to Item list
+                // long i = 1;
+                int n = Finditem(ItemsName);
+                if (n == -1)  //If new item
+                {
+                    dgrvSalesItemList.Rows.Add(ItemsName, Rprice, Qty, Rprice, Itemid, Disamt, Taxamt, Dis, Taxapply, kitchendisplay);
+                }
+                else  // if same item Quantity increase by 1 
+                {
+                    //// if given Qty > stock qty { Stcok exceed from stock  }                      
+                    if (Convert.ToDouble(dgrvSalesItemList.Rows[n].Cells[2].Value) >= Stockqty)
+                    {
+                        MessageBox.Show("Quantity Exceed from Stcok Qty");
+                    }
+                    else
+                    {
+                        //  dgrvSalesItemList.Rows[n].Cells[0].Value = ItemsName;
+                        // dgrvSalesItemList.Rows[n].Cells[1].Value = Rprice;
+                        int QtyInc = Convert.ToInt32(dgrvSalesItemList.Rows[n].Cells[2].Value);
+                        dgrvSalesItemList.Rows[n].Cells[2].Value = (QtyInc + 1);  //Qty Increase
+                        dgrvSalesItemList.Rows[n].Cells[3].Value = Rprice * (QtyInc + 1);   // Total price
+                        //  dgrvSalesItemList.Rows[n].Cells[4].Value = Itemid;                     
+
+                        double qty = Convert.ToDouble(dgrvSalesItemList.Rows[n].Cells[2].Value);
+                        double disrate = Convert.ToDouble(dgrvSalesItemList.Rows[n].Cells[7].Value);
+
+                        if (disrate != 0)  // if discount has
+                        {
+                            double DisamtInc = (((Rprice * qty) * disrate) / 100.00);      // Total Discount amount of this item
+                            dgrvSalesItemList.Rows[n].Cells[5].Value = DisamtInc;
+                        }
+
+                        if (Taxapply != 0)   // If apply  tax 
+                        {
+                            // Total Tax amount  of this item  (Rprice - disamount) * taxRate / 100
+                            double TaxamtInc = ((((Rprice * qty) - (((Rprice * qty) * disrate) / 100.00)) * Taxrate) / 100.00);
+                            dgrvSalesItemList.Rows[n].Cells[6].Value = TaxamtInc;
+                        }
+
+                        // dgrvSalesItemList.Rows[n].Cells[7].Value = Dis; // Discount rate
+                        //  dgrvSalesItemList.Rows[n].Cells[8].Value = Taxapply;  //Tax apply
+                        //  dgrvSalesItemList.Rows[n].Cells[9].Value = kitchendisplay;
+                    }
+
+
+                }
+
+
+                //Hide fields
+                dgrvSalesItemList.Columns[4].Visible = false; // ID             // new in 8.1 version
+                dgrvSalesItemList.Columns[5].Visible = false; // Disamt         // new in 8.1 version
+                dgrvSalesItemList.Columns[6].Visible = false; // taxamt         // new in 8.1 version
+                dgrvSalesItemList.Columns[7].Visible = false; // Discount rate  // new in 8.1 version
+                dgrvSalesItemList.Columns[9].Visible = false; // kitdisplay    // new in 8.3.1 version
+
+
+
+                btnSuspend.Enabled = true;
+                btnPayment.Enabled = true;
+                btnCompleteSalesAndPrint.Enabled = true;
+                btnSaveOnly.Enabled = true;
+                btnPrintDirect.Enabled = true; // complete sale and direct print
+
+                DiscountCalculation();
+                vatcal();
+                txtDiscountRate.Text = "0";
+
+                txtBarcodeReaderBox.Text = "";
+                txtBarcodeReaderBox.Focus();
+                // lbloveralldiscount.Text = "0";
+
+                if (dt.Rows.Count > 0)
+                {
+                    lblNotFound.Visible = false;
+                }
+
+                else
+                {
+                    lblNotFound.Visible = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+                //MessageBox.Show("sorry");
+                return;
             }
         }
 
@@ -1399,6 +1576,12 @@ namespace PointofSale
                 btnSaveOnly.Enabled = false;
                 //  this.tabPageSR_Payment.Parent = null; //Hide payment tab
             }
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            
         }
     }
 }

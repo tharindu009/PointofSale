@@ -9,7 +9,6 @@
 
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private System.ComponentModel.IContainer components;
-        private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
@@ -50,6 +49,9 @@
         private System.Windows.Forms.Button button31;
         private System.Windows.Forms.Button button33;
         private System.Windows.Forms.Button button32;
+        public System.Windows.Forms.Panel panelChildForm;
+        public System.Windows.Forms.Label lblJobNo;
+        public System.Windows.Forms.Button btnInvoice;
     }
 }
 

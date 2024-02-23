@@ -91,8 +91,15 @@ namespace PointofSale
             }
             else if (txtProductQty.Text == "")
             {
-                MessageBox.Show("Please Insert Product Quantity");
-                txtProductQty.Focus();
+                if (checkBox1.Checked)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Please Insert Product Quantity");
+                    txtProductQty.Focus();
+                }
             }
             else if (txtCostPrice.Text == "")
             {
@@ -185,10 +192,10 @@ namespace PointofSale
 
                         if (UserInfo.usertype == "1")
                         {
-                            stockItem go = new stockItem();
-                            go.MdiParent = this.ParentForm;
-                            go.Show();
-                            this.Close();
+                            //stockItem go = new stockItem();
+                            //go.MdiParent = this.ParentForm;
+                            //go.Show();
+                            //this.Close();
                         }
                         else
                         {
@@ -237,10 +244,10 @@ namespace PointofSale
                         //loadData();    
                         if (UserInfo.usertype == "1")
                         {
-                            stockItem go = new stockItem();
-                            go.MdiParent = this.ParentForm;
-                            go.Show();
-                            this.Close();
+                            //stockItem go = new stockItem();
+                            //go.MdiParent = this.ParentForm;
+                            //go.Show();
+                            //this.Close();
                         }
                         else
                         {
@@ -252,7 +259,7 @@ namespace PointofSale
                 }
                 catch (Exception exp)
                 {
-                    MessageBox.Show("Sorry\r\n this id already added \n" + exp.Message);
+                    MessageBox.Show("Sorry\r \n" + exp.Message);
                 }
             }
             //this.Hide();

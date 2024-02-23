@@ -14,8 +14,8 @@ namespace PointofSale.DAL
         // Use for PointofSale.exe.config file   you can change Database server info after compile/Debug 
 
 
-        //static string _ConnectionString = "Data Source=(local);Initial Catalog=kts;User Id=sa;Password=Welcome@2020;"; //-----------------------------Production
-        static string _ConnectionString = "Data Source=DESKTOP-4GPK025;Initial Catalog=kts;Trusted_Connection=True;"; //---------------------------Test
+        static string _ConnectionString = "Data Source=(local);Initial Catalog=kts;User Id=sa;Password=Welcome@2020;"; //-----------------------------Production
+        //static string _ConnectionString = "Data Source=DESKTOP-4GPK025;Initial Catalog=kts;Trusted_Connection=True;"; //---------------------------Test
 
        
         //If your MSSQL server have window authentication (MSSQL server open without Password) please use this one 
