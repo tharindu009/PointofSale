@@ -196,6 +196,7 @@
             this.grdJobDetail.EnableHeadersVisualStyles = false;
             this.grdJobDetail.Location = new System.Drawing.Point(12, 105);
             this.grdJobDetail.Name = "grdJobDetail";
+            this.grdJobDetail.ReadOnly = true;
             this.grdJobDetail.RowHeadersVisible = false;
             this.grdJobDetail.RowTemplate.Height = 35;
             this.grdJobDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

@@ -559,5 +559,12 @@ namespace PointofSale
         {
             this.Hide();
         }
+
+        private void kryptonTextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            string ItemQuery = "SELECT [product_id],[product_name],[product_quantity],[retail_price] FROM [purchase] where [product_quantity] > 0 and ([product_name] like '%" + txtItemSearch.Text + "%' AND  [Category] = 'Service')";
+            DataTable dtItem = DAL.DataAccessManager.GetDataTable(ItemQuery);
+            grdServiceList.DataSource = dtItem;
+        }
     }
 }

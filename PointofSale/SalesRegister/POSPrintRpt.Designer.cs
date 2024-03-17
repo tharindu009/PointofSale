@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.POSPrintPageBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.psodbDataSet = new PointofSale.SalesRegister.psodbDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolsaleno = new System.Windows.Forms.ToolStripStatusLabel();
@@ -38,13 +40,21 @@
             this.btnstopPrint = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.timerpregress = new System.Windows.Forms.Timer(this.components);
-            this.psodbDataSet = new PointofSale.SalesRegister.psodbDataSet();
-            this.POSPrintPageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.POSPrintPageTableAdapter = new PointofSale.SalesRegister.psodbDataSetTableAdapters.POSPrintPageTableAdapter();
-            this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.psodbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.POSPrintPageBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.psodbDataSet)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // POSPrintPageBindingSource
+            // 
+            this.POSPrintPageBindingSource.DataMember = "POSPrintPage";
+            this.POSPrintPageBindingSource.DataSource = this.psodbDataSet;
+            // 
+            // psodbDataSet
+            // 
+            this.psodbDataSet.DataSetName = "psodbDataSet";
+            this.psodbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -58,6 +68,7 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(731, 832);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.RenderingComplete += new Microsoft.Reporting.WinForms.RenderingCompleteEventHandler(this.reportViewer1_RenderingComplete);
             // 
             // statusStrip1
             // 
@@ -114,16 +125,6 @@
             // 
             this.timerpregress.Tick += new System.EventHandler(this.timerpregress_Tick);
             // 
-            // psodbDataSet
-            // 
-            this.psodbDataSet.DataSetName = "psodbDataSet";
-            this.psodbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // POSPrintPageBindingSource
-            // 
-            this.POSPrintPageBindingSource.DataMember = "POSPrintPage";
-            this.POSPrintPageBindingSource.DataSource = this.psodbDataSet;
-            // 
             // POSPrintPageTableAdapter
             // 
             this.POSPrintPageTableAdapter.ClearBeforeFill = true;
@@ -140,10 +141,10 @@
             this.Name = "POSPrintRpt";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.POSPrintRpt_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.POSPrintPageBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.psodbDataSet)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.psodbDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.POSPrintPageBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

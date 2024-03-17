@@ -134,6 +134,7 @@
             this.grdStockList.EnableHeadersVisualStyles = false;
             this.grdStockList.Location = new System.Drawing.Point(12, 73);
             this.grdStockList.Name = "grdStockList";
+            this.grdStockList.ReadOnly = true;
             this.grdStockList.RowHeadersVisible = false;
             this.grdStockList.RowTemplate.Height = 35;
             this.grdStockList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

@@ -37,9 +37,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtSearch = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.lblRow = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.grdStockList)).BeginInit();
@@ -103,6 +103,7 @@
             // 
             // grdStockList
             // 
+            this.grdStockList.AllowUserToAddRows = false;
             this.grdStockList.AllowUserToResizeRows = false;
             this.grdStockList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -182,16 +183,16 @@
             this.panel2.Size = new System.Drawing.Size(812, 31);
             this.panel2.TabIndex = 49;
             // 
-            // label2
+            // lblRow
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Yellow;
-            this.label2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 26);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "Check Stock";
+            this.lblRow.AutoSize = true;
+            this.lblRow.BackColor = System.Drawing.Color.Transparent;
+            this.lblRow.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRow.Location = new System.Drawing.Point(659, 2);
+            this.lblRow.Name = "lblRow";
+            this.lblRow.Size = new System.Drawing.Size(15, 26);
+            this.lblRow.TabIndex = 52;
+            this.lblRow.Text = ".";
             // 
             // label4
             // 
@@ -204,16 +205,16 @@
             this.label4.TabIndex = 51;
             this.label4.Text = "Out of Stock";
             // 
-            // lblRow
+            // label2
             // 
-            this.lblRow.AutoSize = true;
-            this.lblRow.BackColor = System.Drawing.Color.Transparent;
-            this.lblRow.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRow.Location = new System.Drawing.Point(659, 2);
-            this.lblRow.Name = "lblRow";
-            this.lblRow.Size = new System.Drawing.Size(15, 26);
-            this.lblRow.TabIndex = 52;
-            this.lblRow.Text = ".";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Yellow;
+            this.label2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 2);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 26);
+            this.label2.TabIndex = 50;
+            this.label2.Text = "Check Stock";
             // 
             // kryptonButton1
             // 
@@ -278,7 +279,7 @@
             // 
             this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
-            // stockList
+            // Purchase_History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -292,7 +293,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "stockList";
+            this.Name = "Purchase_History";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowIcon = false;

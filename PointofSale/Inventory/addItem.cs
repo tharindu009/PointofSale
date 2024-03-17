@@ -22,6 +22,13 @@ namespace PointofSale
 
         byte[] ItemImage;
 
+        // Get Item bar-code from Stock List form
+        public string itemCode
+        {
+            set { lblItemcode.Text = value; }
+            get { return lblItemcode.Text; }
+        }
+
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
             
@@ -384,7 +391,7 @@ namespace PointofSale
             {
                 dtpurchaseDate.Format = DateTimePickerFormat.Custom;
                 dtpurchaseDate.CustomFormat = "yyyy-MM-dd";
-
+                
                 //Supplier Info
                 string sqlCust = "select   DISTINCT  *   from tbl_customer where PeopleType = 'Supplier'";
                 DAL.DataAccessManager.ExecuteSQL(sqlCust);

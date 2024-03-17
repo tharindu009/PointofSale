@@ -159,6 +159,7 @@
             // 
             // grdCategory
             // 
+            this.grdCategory.AllowUserToAddRows = false;
             this.grdCategory.AllowUserToResizeRows = false;
             this.grdCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -188,6 +189,7 @@
             this.grdCategory.EnableHeadersVisualStyles = false;
             this.grdCategory.Location = new System.Drawing.Point(12, 131);
             this.grdCategory.Name = "grdCategory";
+            this.grdCategory.ReadOnly = true;
             this.grdCategory.RowHeadersVisible = false;
             this.grdCategory.RowTemplate.Height = 35;
             this.grdCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -291,9 +293,9 @@
             this.lblID.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.Location = new System.Drawing.Point(466, 81);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(15, 26);
+            this.lblID.Size = new System.Drawing.Size(20, 26);
             this.lblID.TabIndex = 99;
-            this.lblID.Text = ".";
+            this.lblID.Text = "-";
             // 
             // addCategory
             // 

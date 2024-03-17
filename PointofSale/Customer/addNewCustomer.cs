@@ -127,6 +127,7 @@ namespace PointofSale
             txtCustomerName.Text = string.Empty;
             txtCustomerAddress.Text = string.Empty;
             txtPhone.Text = string.Empty;
+            txtEmailAddress.Text = string.Empty;
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)
@@ -139,7 +140,7 @@ namespace PointofSale
                     if (txtCustomerName.Text == "") { MessageBox.Show("Please Fill Name"); txtCustomerName.Focus(); }
                     else if (txtPhone.Text == "") { MessageBox.Show("Please Fill Phone"); txtPhone.Focus(); }
                     else if (CombPeopleType.Text == "") { MessageBox.Show("Please Fill People Type"); CombPeopleType.Focus(); }
-                    else if (txtCity.Text == "") { MessageBox.Show("Please Fill City"); txtCity.Focus(); }
+                    else if (txtCity.Text == "" && CombPeopleType.Text == "Customer") { MessageBox.Show("Please Fill Vehicle Reg No"); txtCity.Focus(); }
                     else if (txtCustomerAddress.Text == "") { MessageBox.Show("Please Fill  Address"); txtCustomerAddress.Focus(); }
                     else
                     {
@@ -192,7 +193,7 @@ namespace PointofSale
                 //            "   (payment_amount - due_amount) as 'Paid Amount' ,  payment_type as 'Payment Type' , " +
                 //            "   due_amount as Due, emp_id as 'Sold by' ,    C_id  as Contact , Comment as 'Cust Name/Comment' " +
                 //            "   from sales_payment   where C_id = '" + lblCustID.Text + "' order by  sales_id desc";
-                string sql = "SELECT [ID],[Name],[EmailAddress],[Phone],[Address],[City],[PeopleType] FROM [tbl_customer] order by Name asc";
+                string sql = "SELECT [ID],[Name],[EmailAddress],[Phone],[Address],[City] as [Vehicle Reg],[PeopleType] FROM [tbl_customer] order by Name asc";
                 DAL.DataAccessManager.ExecuteSQL(sql);
                 DataTable dt1 = DAL.DataAccessManager.GetDataTable(sql);
                 dtgviewCusttrxHistory.DataSource = dt1;
@@ -203,6 +204,38 @@ namespace PointofSale
         }
 
         private void dtgviewCusttrxHistory_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+                DataGridViewRow row = dtgviewCusttrxHistory.Rows[e.RowIndex];
+                string Name = row.Cells["Name"].Value.ToString();
+                string Contact = row.Cells["Phone"].Value.ToString();
+                string Email = row.Cells["EmailAddress"].Value.ToString();
+                string Address = row.Cells["Address"].Value.ToString();
+                string City = row.Cells["City"].Value.ToString();
+                string CusID = row.Cells["ID"].Value.ToString();
+                string Type = row.Cells["PeopleType"].Value.ToString();
+
+
+                txtCustomerName.Text = Name;
+                txtPhone.Text = Contact;
+                txtEmailAddress.Text = Email;
+                txtCity.Text = City;
+                CombPeopleType.Text = Type;
+                lblCustID.Text = CusID;
+                txtCustomerAddress.Text = Address;
+
+                btnSave.Text = "Update";
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void dtgviewCusttrxHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {

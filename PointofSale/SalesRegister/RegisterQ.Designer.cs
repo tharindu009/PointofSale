@@ -200,7 +200,7 @@
             this.btnPrintDirect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrintDirect.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintDirect.ForeColor = System.Drawing.Color.Black;
-            this.btnPrintDirect.Location = new System.Drawing.Point(335, 477);
+            this.btnPrintDirect.Location = new System.Drawing.Point(335, 521);
             this.btnPrintDirect.Name = "btnPrintDirect";
             this.btnPrintDirect.Size = new System.Drawing.Size(125, 56);
             this.btnPrintDirect.TabIndex = 304;
@@ -218,7 +218,7 @@
             this.btnSaveOnly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveOnly.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveOnly.ForeColor = System.Drawing.Color.Snow;
-            this.btnSaveOnly.Location = new System.Drawing.Point(86, 477);
+            this.btnSaveOnly.Location = new System.Drawing.Point(86, 521);
             this.btnSaveOnly.Name = "btnSaveOnly";
             this.btnSaveOnly.Size = new System.Drawing.Size(104, 56);
             this.btnSaveOnly.TabIndex = 303;
@@ -236,7 +236,7 @@
             this.btnCompleteSalesAndPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompleteSalesAndPrint.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompleteSalesAndPrint.ForeColor = System.Drawing.Color.Black;
-            this.btnCompleteSalesAndPrint.Location = new System.Drawing.Point(196, 477);
+            this.btnCompleteSalesAndPrint.Location = new System.Drawing.Point(196, 521);
             this.btnCompleteSalesAndPrint.Name = "btnCompleteSalesAndPrint";
             this.btnCompleteSalesAndPrint.Size = new System.Drawing.Size(133, 56);
             this.btnCompleteSalesAndPrint.TabIndex = 302;
@@ -247,7 +247,7 @@
             // 
             // lblCustID
             // 
-            this.lblCustID.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblCustID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblCustID.AutoSize = true;
             this.lblCustID.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustID.Location = new System.Drawing.Point(751, 428);
@@ -258,7 +258,7 @@
             // 
             // ComboCustID
             // 
-            this.ComboCustID.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ComboCustID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ComboCustID.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboCustID.FormattingEnabled = true;
             this.ComboCustID.Location = new System.Drawing.Point(573, 448);
@@ -266,10 +266,11 @@
             this.ComboCustID.Size = new System.Drawing.Size(240, 31);
             this.ComboCustID.TabIndex = 287;
             this.ComboCustID.Text = "Guest";
+            this.ComboCustID.SelectedIndexChanged += new System.EventHandler(this.ComboCustID_SelectedIndexChanged);
             // 
             // label36
             // 
-            this.label36.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.Location = new System.Drawing.Point(756, 483);
@@ -280,7 +281,7 @@
             // 
             // label35
             // 
-            this.label35.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Location = new System.Drawing.Point(757, 558);
@@ -288,11 +289,10 @@
             this.label35.Size = new System.Drawing.Size(56, 19);
             this.label35.TabIndex = 299;
             this.label35.Text = "Optional";
-            this.label35.Visible = false;
             // 
             // label34
             // 
-            this.label34.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.Location = new System.Drawing.Point(573, 554);
@@ -300,11 +300,10 @@
             this.label34.Size = new System.Drawing.Size(78, 23);
             this.label34.TabIndex = 298;
             this.label34.Text = "Comment:";
-            this.label34.Visible = false;
             // 
             // txtCustName
             // 
-            this.txtCustName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtCustName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCustName.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCustName.Location = new System.Drawing.Point(573, 579);
             this.txtCustName.Multiline = true;
@@ -312,11 +311,10 @@
             this.txtCustName.Size = new System.Drawing.Size(240, 56);
             this.txtCustName.TabIndex = 290;
             this.txtCustName.Text = "Done...";
-            this.txtCustName.Visible = false;
             // 
             // txtDueAmount
             // 
-            this.txtDueAmount.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtDueAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtDueAmount.Enabled = false;
             this.txtDueAmount.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDueAmount.Location = new System.Drawing.Point(572, 395);
@@ -326,7 +324,7 @@
             // 
             // label26
             // 
-            this.label26.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label26.AutoSize = true;
             this.label26.Enabled = false;
             this.label26.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -338,7 +336,7 @@
             // 
             // txtChangeAmount
             // 
-            this.txtChangeAmount.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtChangeAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtChangeAmount.Enabled = false;
             this.txtChangeAmount.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChangeAmount.Location = new System.Drawing.Point(573, 336);
@@ -348,7 +346,7 @@
             // 
             // label21
             // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(570, 428);
@@ -359,7 +357,7 @@
             // 
             // label20
             // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label20.AutoSize = true;
             this.label20.Enabled = false;
             this.label20.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -371,7 +369,7 @@
             // 
             // label18
             // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(573, 495);
@@ -382,7 +380,7 @@
             // 
             // CombPayby
             // 
-            this.CombPayby.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CombPayby.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.CombPayby.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CombPayby.FormattingEnabled = true;
             this.CombPayby.Items.AddRange(new object[] {
@@ -411,7 +409,7 @@
             // 
             // dtSalesDate
             // 
-            this.dtSalesDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dtSalesDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dtSalesDate.CustomFormat = "";
             this.dtSalesDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtSalesDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -830,7 +828,7 @@
             this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPayment.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnPayment.Location = new System.Drawing.Point(2, 477);
+            this.btnPayment.Location = new System.Drawing.Point(2, 521);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(81, 56);
             this.btnPayment.TabIndex = 275;
@@ -858,7 +856,7 @@
             this.btnSuspend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuspend.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuspend.ForeColor = System.Drawing.Color.Black;
-            this.btnSuspend.Location = new System.Drawing.Point(466, 477);
+            this.btnSuspend.Location = new System.Drawing.Point(466, 521);
             this.btnSuspend.Name = "btnSuspend";
             this.btnSuspend.Size = new System.Drawing.Size(95, 56);
             this.btnSuspend.TabIndex = 276;
@@ -888,6 +886,7 @@
             this.txtSearchItem.Name = "txtSearchItem";
             this.txtSearchItem.Size = new System.Drawing.Size(338, 20);
             this.txtSearchItem.TabIndex = 278;
+            this.txtSearchItem.TextChanged += new System.EventHandler(this.txtSearchItem_TextChanged);
             // 
             // label15
             // 

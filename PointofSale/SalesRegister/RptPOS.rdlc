@@ -651,7 +651,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -897,20 +896,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>If you have any enquiries concerning this invoice, please contact Mr. Moorthi Dewasurendra on +94-777798859, Address :- 88, Yakkala Road, Gampaha, Sri Lanka,    Email :- info@hybridcare.lk ,  or </Value>
+                <Value>If you have any enquiries concerning this invoice, please contact Mr. Moorthi Dewasurendra on +94-777798859, Address :- 88, Yakkala Road, Gampaha, Sri Lanka,    Email :- info@hybridcare.lk</Value>
                 <Style>
                   <FontFamily>poppins</FontFamily>
                   <FontSize>9pt</FontSize>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>moorthi.dewasurendra@yahoo.com </Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>poppins</FontFamily>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <TextDecoration>None</TextDecoration>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -918,9 +907,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox23</rd:DefaultName>
-        <Top>2.57548in</Top>
+        <Top>2.88798in</Top>
         <Left>0.29042in</Left>
-        <Height>0.69792in</Height>
+        <Height>0.47917in</Height>
         <Width>7.11458in</Width>
         <ZIndex>10</ZIndex>
         <Style>
@@ -1005,6 +994,38 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox19">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Comments: </Value>
+                <Style>
+                  <FontFamily>poppins</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>2.57548in</Top>
+        <Left>0.29042in</Left>
+        <Height>0.25in</Height>
+        <Width>7.29291in</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>3.68104in</Height>
     <Style />
@@ -1045,14 +1066,16 @@
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.1in</Top>
-          <Left>2.405in</Left>
+          <Top>0.11389in</Top>
+          <Left>4.83333in</Left>
           <Height>0.34548in</Height>
-          <Width>3.15625in</Width>
+          <Width>2.875in</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -1077,12 +1100,14 @@
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.45937in</Top>
-          <Left>2.405in</Left>
+          <Left>4.53in</Left>
           <Height>0.22917in</Height>
           <Width>3.15625in</Width>
           <ZIndex>2</ZIndex>
@@ -1112,7 +1137,9 @@
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
             </Paragraph>
             <Paragraph>
               <TextRuns>
@@ -1126,7 +1153,9 @@
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
             </Paragraph>
             <Paragraph>
               <TextRuns>
@@ -1140,7 +1169,9 @@
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
             </Paragraph>
             <Paragraph>
               <TextRuns>
@@ -1155,7 +1186,9 @@
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
             </Paragraph>
             <Paragraph>
               <TextRuns>
@@ -1170,12 +1203,14 @@
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
           <Top>0.70521in</Top>
-          <Left>2.405in</Left>
+          <Left>4.53in</Left>
           <Height>0.875in</Height>
           <Width>3.15625in</Width>
           <ZIndex>3</ZIndex>
@@ -1206,8 +1241,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>0.19548in</Top>
-          <Left>5.67708in</Left>
+          <Top>1.33993in</Top>
+          <Left>0.125in</Left>
           <Height>0.25in</Height>
           <Width>2.03125in</Width>
           <ZIndex>4</ZIndex>
@@ -1229,7 +1264,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.57292in</Height>
+      <Height>1.01319in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1250,12 +1285,14 @@
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
             </Paragraph>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>All kind of vehicle Health Checks reports ,</Value>
+                  <Value>All kind of vehicle Health Checks reports , All kind of SUZUKI HV Battery Repairs, All kind of  ECU Repairing,</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
                     <FontFamily>poppins</FontFamily>
@@ -1265,12 +1302,14 @@
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
             </Paragraph>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>All kind of SUZUKI HV Battery Repairs,</Value>
+                  <Value>New Battery Replacement and restoration, Preventive Maintenance of All kind of Hybrid Batteries.Repair, Rebuilding Import of Hybrid spare parts,  Diagnosing any type of Vehicle and make reports</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
                     <FontFamily>poppins</FontFamily>
@@ -1280,73 +1319,15 @@
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>All kind of  ECU Repairing,</Value>
-                  <Style>
-                    <FontStyle>Normal</FontStyle>
-                    <FontFamily>poppins</FontFamily>
-                    <FontSize>8pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                    <TextDecoration>None</TextDecoration>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>New Battery Replacement and restoration,</Value>
-                  <Style>
-                    <FontStyle>Normal</FontStyle>
-                    <FontFamily>poppins</FontFamily>
-                    <FontSize>8pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                    <TextDecoration>None</TextDecoration>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Preventive Maintenance of All kind of Hybrid Batteries.Repair, Rebuilding Import of Hybrid spare parts, </Value>
-                  <Style>
-                    <FontStyle>Normal</FontStyle>
-                    <FontFamily>poppins</FontFamily>
-                    <FontSize>8pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                    <TextDecoration>None</TextDecoration>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Diagnosing any type of Vehicle and make reports</Value>
-                  <Style>
-                    <FontStyle>Normal</FontStyle>
-                    <FontFamily>poppins</FontFamily>
-                    <FontSize>8pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                    <TextDecoration>None</TextDecoration>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox28</rd:DefaultName>
           <Top>0.04444in</Top>
           <Left>0.29042in</Left>
-          <Height>1.39583in</Height>
+          <Height>0.84375in</Height>
           <Width>6.57291in</Width>
           <Style>
             <Border>

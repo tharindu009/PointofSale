@@ -413,6 +413,7 @@
             // 
             // dtgviewCusttrxHistory
             // 
+            this.dtgviewCusttrxHistory.AllowUserToAddRows = false;
             this.dtgviewCusttrxHistory.AllowUserToResizeRows = false;
             this.dtgviewCusttrxHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -442,12 +443,14 @@
             this.dtgviewCusttrxHistory.EnableHeadersVisualStyles = false;
             this.dtgviewCusttrxHistory.Location = new System.Drawing.Point(12, 352);
             this.dtgviewCusttrxHistory.Name = "dtgviewCusttrxHistory";
+            this.dtgviewCusttrxHistory.ReadOnly = true;
             this.dtgviewCusttrxHistory.RowHeadersVisible = false;
             this.dtgviewCusttrxHistory.RowTemplate.Height = 35;
             this.dtgviewCusttrxHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgviewCusttrxHistory.Size = new System.Drawing.Size(817, 216);
             this.dtgviewCusttrxHistory.TabIndex = 16;
             this.dtgviewCusttrxHistory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgviewCusttrxHistory_CellClick);
+            this.dtgviewCusttrxHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgviewCusttrxHistory_CellContentClick);
             // 
             // lblCustID
             // 

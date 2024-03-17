@@ -27,10 +27,18 @@ namespace PointofSale.SalesRegister
             toolsaleno.Text = saleno;
         }
 
+        bool DirectPrint = false;
+
+        public POSPrintRpt(string saleno, bool printID)
+        {
+            DirectPrint = printID;
+        }
+
         private void POSPrintRpt_Load(object sender, EventArgs e)
         {
             try
             {
+                //reportViewer1.Reset();
                 string sql = " SELECT  sp.sales_id AS salesid, sp.payment_type AS paytype, sp.payment_amount AS Payamount, " +
                              " sp.change_amount AS charAmt, sp.due_amount AS due, sp.dis, sp.vat, sp.sales_time AS s_time,  " +
                              " sp.c_id AS custID, sp.emp_id AS empID, sp.comment AS Note, sp.TrxType, si.sales_id,si.item_id,  " +
@@ -57,6 +65,9 @@ namespace PointofSale.SalesRegister
                 string milage = dt.Rows[0][42].ToString();
                 string vehicleno = dt.Rows[0][43].ToString();
 
+                string cusID = dt.Rows[0][8].ToString();
+                string CusDetail = "";
+
                 //ReportParameter[] parameters = new ReportParameter[2];
                 //parameters[0] = new ReportParameter("Milage", milage);
 
@@ -67,7 +78,7 @@ namespace PointofSale.SalesRegister
                 this.reportViewer1.LocalReport.DataSources.Clear();
                 this.reportViewer1.LocalReport.DataSources.Add(reportDSDetail);
                 this.reportViewer1.LocalReport.Refresh();
-                this.reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
+                this.reportViewer1.SetDisplayMode(DisplayMode.Normal);
                 this.reportViewer1.ZoomMode = ZoomMode.PageWidth;
                 //this.reportViewer1.ZoomPercent = 80;
                 this.reportViewer1.RefreshReport();
@@ -78,7 +89,7 @@ namespace PointofSale.SalesRegister
                 {
                     timerpregress.Interval = 100;
                     timerpregress.Start();
-                    this.reportViewer1.PrintDialog();
+                    //this.reportViewer1.PrintDialog();
                 }
                 else
                 {
@@ -99,7 +110,7 @@ namespace PointofSale.SalesRegister
         public void prgressbar()
         {
 
-            toolStripProgressBar1.Increment(5);
+            toolStripProgressBar1.Increment(10);
             toolstrpProgressCount.Text = " " + toolStripProgressBar1.Value.ToString() + "%";
             if (toolStripProgressBar1.Value == toolStripProgressBar1.Maximum)
             {
@@ -136,6 +147,14 @@ namespace PointofSale.SalesRegister
             {
                 btnstopPrint.Text = "STOP";
                 timerpregress.Start();
+            }
+        }
+
+        private void reportViewer1_RenderingComplete(object sender, RenderingCompleteEventArgs e)
+        {
+            if (parameter.autoprintid == "1")
+            {
+                //reportViewer1.PrintDialog();
             }
         }
     }

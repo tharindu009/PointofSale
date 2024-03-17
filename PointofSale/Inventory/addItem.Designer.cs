@@ -147,7 +147,7 @@
             this.grpboxPurchasehistory.Controls.Add(this.label14);
             this.grpboxPurchasehistory.Controls.Add(this.label13);
             this.grpboxPurchasehistory.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpboxPurchasehistory.Location = new System.Drawing.Point(13, 473);
+            this.grpboxPurchasehistory.Location = new System.Drawing.Point(13, 468);
             this.grpboxPurchasehistory.Name = "grpboxPurchasehistory";
             this.grpboxPurchasehistory.Size = new System.Drawing.Size(816, 157);
             this.grpboxPurchasehistory.TabIndex = 234;

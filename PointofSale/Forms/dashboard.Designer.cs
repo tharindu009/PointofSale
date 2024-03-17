@@ -52,6 +52,7 @@
         public System.Windows.Forms.Panel panelChildForm;
         public System.Windows.Forms.Label lblJobNo;
         public System.Windows.Forms.Button btnInvoice;
+        private System.Windows.Forms.Button button34;
     }
 }
 

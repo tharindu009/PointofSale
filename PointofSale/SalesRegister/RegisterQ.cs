@@ -106,7 +106,28 @@ namespace PointofSale
                     il.TransparentColor = Color.Transparent;
                     il.ImageSize = new Size(55, 45);
                     //il.Images.Add(Image.FromFile(img_directory + dataReader["imagename"]));
-                    il.Images.Add(PointofSale.Properties.Resources.product);
+                    //il.Images.Add(PointofSale.Properties.Resources.product);
+                    string strCategory = dataReader["category"].ToString();
+                    if (strCategory == "Service")
+                    {
+                        il.Images.Add(PointofSale.Properties.Resources.service);
+                    }
+                    if(strCategory.IndexOf("oil", 0, StringComparison.OrdinalIgnoreCase) != -1 || strCategory.IndexOf("filter", 0, StringComparison.OrdinalIgnoreCase) == -1)
+                    {
+                        il.Images.Add(PointofSale.Properties.Resources.oil);
+                    }
+                    if(strCategory == "Air Filter")
+                    {
+                        il.Images.Add(PointofSale.Properties.Resources.airfilter);
+                    }
+                    if (strCategory == "Oil Filter")
+                    {
+                        il.Images.Add(PointofSale.Properties.Resources.oilfilter);
+                    }
+                    else
+                    {
+                        il.Images.Add(PointofSale.Properties.Resources.product);
+                    }
 
                     b.Image = il.Images[0];
                     b.Margin = new Padding(3, 3, 3, 3);
@@ -117,7 +138,10 @@ namespace PointofSale
                     //b.Text += " " + dataReader["product_id"] + "\n ";
                     b.Text += dataReader["product_name"].ToString();
                     //b.Text += "\n Buy: " + dataReader["cost_price"];
-                    b.Text += "\n Stock: " + dataReader["product_quantity"];
+                    if (strCategory != "Service")
+                    {
+                        b.Text += "\n Stock: " + dataReader["product_quantity"];
+                    }
                     b.Text += "\n R.Price: " + dataReader["retail_price"];
                     //b.Text += "\n Dis: " + dataReader["discount"] + "% ";   //"Tax: " + taxapply;
 
@@ -194,6 +218,9 @@ namespace PointofSale
                     // Default tax rate 
                     double Taxrate = Convert.ToDouble(BAL.vatdisvalue.vat);
 
+                    string strProID = txtBarcodeReaderBox.Text.ToString();
+                    strProID = strProID.Trim();
+
                     //- new in 8.1 version // Default Product QTY is 1
                     string sql = "SELECT  product_name as Name , retail_price as Price , 1.00  as QTY, (retail_price * 1.00 ) * 1.00  as 'Total' ,  " +
                             " (((retail_price * 1.00 ) * discount) / 100.00) as 'dis amt' , " +
@@ -201,7 +228,7 @@ namespace PointofSale
                             " WHEN taxapply = 1 THEN   (((retail_price * 1.00 )  - (((retail_price * 1.00 ) * discount) / 100.00))  * " + Taxrate + " ) / 100.00   " +
                             " ELSE '0.00'  " +
                             " END 'taxamt' , product_id as ID , discount , taxapply, status, product_quantity  " +
-                            " FROM  purchase  where product_id = '" + txtBarcodeReaderBox.Text + "'  and product_quantity >= 1 ";
+                            " FROM  purchase  where product_id = '" + strProID + "'  and product_quantity >= 1 ";
                     DAL.DataAccessManager.ExecuteSQL(sql);
                     DataTable dt = DAL.DataAccessManager.GetDataTable(sql);
 
@@ -443,7 +470,8 @@ namespace PointofSale
                         //tabSRcontrol.SelectedTab = tabPageSR_Counter;
                         btnCompleteSalesAndPrint.Enabled = false;
                         btnPayment.Enabled = false;
-                        txtPaidAmount.Text = "00";
+                        //txtPaidAmount.Text = "00";
+                        CreateInvoiceNo();
                     }
                     catch (Exception exp)
                     {
@@ -451,6 +479,7 @@ namespace PointofSale
                     }
                 }
             }
+            
         }
 
 
@@ -1267,18 +1296,28 @@ namespace PointofSale
                         ///// save sales items one by one 
                         sales_item(dtSalesDate.Text);
 
-                        PrintReceiptWithoutPrintDialog();
+                        //PrintReceiptWithoutPrintDialog();
+
+                        
 
                         //Clean Datagridview and Back to sales cart
                         dgrvSalesItemList.Rows.Clear();
                         DiscountCalculation();
                         vatcal();
+
+                        parameter.autoprintid = "1";
+                        POSPrintRpt go = new POSPrintRpt(txtInvoice.Text);
+                        go.ShowDialog();
+
                         //    this.tabPageSR_Payment.Parent = null; //Hide payment tab
                         //tabSRcontrol.SelectedTab = tabPageSR_Counter;
                         btnCompleteSalesAndPrint.Enabled = false;
                         btnPayment.Enabled = false;
                         btnSaveOnly.Enabled = false;
                         //UpdateJobCard();
+                        CreateInvoiceNo();
+
+
                     }
                     catch (Exception exp)
                     {
@@ -1286,6 +1325,7 @@ namespace PointofSale
                     }
                 }
             }
+            
         }
 
 
@@ -1513,7 +1553,7 @@ namespace PointofSale
                     vatcal();
                     //   this.tabPageSR_Payment.Parent = null; //Hide payment tab
                     //tabSRcontrol.SelectedTab = tabPageSR_Counter;
-
+                    CreateInvoiceNo();
                 }
                 catch (Exception exp)
                 {
@@ -1575,6 +1615,7 @@ namespace PointofSale
                 btnPayment.Enabled = false;
                 btnSaveOnly.Enabled = false;
                 //  this.tabPageSR_Payment.Parent = null; //Hide payment tab
+                CreateInvoiceNo();
             }
         }
 
@@ -1582,6 +1623,67 @@ namespace PointofSale
         {
 
             
+        }
+
+        private void txtSearchItem_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+                ItemList_with_images(txtSearchItem.Text);
+            }
+            catch
+            {
+            }
+        }
+
+
+        private void CreateInvoiceNo()
+        {
+            string sql = "select sales_id from sales_payment order by sales_id desc";
+            DataTable dt = DAL.DataAccessManager.GetDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                double id = Convert.ToDouble(dt.Rows[0].ItemArray[0].ToString()) + 1;
+                //  txtInvoiceNo.Text = Convert.ToString(id);
+                txtInvoice.Text = Convert.ToString(Convert.ToInt32(id));
+                // btnInvoiceNo.Text = id.ToString();
+            }
+            else
+            {
+                double id = 1;
+                // txtInvoiceNo.Text = Convert.ToString(id);
+                txtInvoice.Text = Convert.ToString(Convert.ToInt32(id));
+                // btnInvoiceNo.Text = id.ToString();
+            }
+            txtPaidAmount.Text = "";
+            dgrvSalesItemList.Rows.Clear();
+            dgrvSalesItemList.Visible = false;
+            // lblTotalItems.Text = "0";
+            txtDiscountRate.Text = "0";
+            lbloveralldiscount.Text = "0";
+            DiscountCalculation();
+            vatcal();
+            btnCompleteSalesAndPrint.Enabled = false;
+            btnSaveOnly.Enabled = false;
+            btnPayment.Enabled = false;
+            //tabPageSR_Counter.Text = "Terminal";
+            txtBarcodeReaderBox.Focus();
+            //  this.tabPageSR_Payment.Parent = null; //Hide payment tab
+        }
+
+        private void ComboCustID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string sqlCmd = "Select ID from  tbl_customer  where Name  = '" + ComboCustID.Text + "'";
+                DAL.DataAccessManager.ExecuteSQL(sqlCmd);
+                DataTable dt1 = DAL.DataAccessManager.GetDataTable(sqlCmd);
+                lblCustID.Text = dt1.Rows[0].ItemArray[0].ToString();
+            }
+            catch
+            {
+            }
         }
     }
 }
