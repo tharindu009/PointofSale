@@ -89,20 +89,32 @@ namespace PointofSale
                     {
                         KitchenDisplay = "NO";
                     }
+
+                    string Qty = dataReader["product_quantity"].ToString();
+                    //double intQty = Convert.ToDouble(dataReader["product_quantity"].ToString());
+                    //if(intQty == 0.00)
+                    //{
+                    //    b.BackColor = Color.MediumVioletRed;
+                    //}
+                    //if(intQty > 0.00 && intQty < 5.00)
+                    //{
+                    //    b.BackColor = Color.Yellow;
+                    //}
+
                     string details =
                         "====================================" +
                         "\n ID: " + dataReader["product_id"] +
                         "\n Name: " + dataReader["product_name"].ToString() +
                         "\n Buy price: " + dataReader["cost_price"].ToString() +
                         "\n Stock Qty: " + dataReader["product_quantity"].ToString() +
-                        "\n Retail price: " + dataReader["product_quantity"].ToString() +
+                        "\n Retail price: " + Qty +
                         "\n Discount: " + dataReader["discount"].ToString() + "%" +
                         "\n Category: " + dataReader["category"].ToString() +
                         "\n Supplier: " + dataReader["supplier"].ToString() +
                         "\n Branch: " + dataReader["Shopid"].ToString() +
                         "\n Tax Apply: " + taxapply +
                         "\n Kitchen Display  : " + KitchenDisplay +
-                        "\n =================================";
+                        "\n ====================================";
                     b.Name = details;
                     toolTip1.ToolTipTitle = "Item Details";
                     toolTip1.AutoPopDelay = 32766;
@@ -256,6 +268,11 @@ namespace PointofSale
             //regQ.BringToFront();
             //regQ.Show();
             //tabControl1.SelectTab(tabPage2);
+        }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
