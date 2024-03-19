@@ -2372,5 +2372,10 @@ namespace PointofSale
             }
 
         }
+
+        private void txtBarcodeReaderBox_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

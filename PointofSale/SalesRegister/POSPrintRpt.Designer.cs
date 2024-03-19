@@ -140,6 +140,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Name = "POSPrintRpt";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.POSPrintRpt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.POSPrintPageBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.psodbDataSet)).EndInit();

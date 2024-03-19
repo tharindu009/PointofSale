@@ -89,21 +89,20 @@ namespace PointofSale
                     {
                         KitchenDisplay = "NO";
                     }
-
                     string details =
                         "====================================" +
                         "\n ID: " + dataReader["product_id"] +
                         "\n Name: " + dataReader["product_name"].ToString() +
                         "\n Buy price: " + dataReader["cost_price"].ToString() +
                         "\n Stock Qty: " + dataReader["product_quantity"].ToString() +
-                        "\n Retail price: " + dataReader["retail_price"].ToString() +
+                        "\n Retail price: " + dataReader["product_quantity"].ToString() +
                         "\n Discount: " + dataReader["discount"].ToString() + "%" +
                         "\n Category: " + dataReader["category"].ToString() +
                         "\n Supplier: " + dataReader["supplier"].ToString() +
                         "\n Branch: " + dataReader["Shopid"].ToString() +
                         "\n Tax Apply: " + taxapply +
                         "\n Kitchen Display  : " + KitchenDisplay +
-                        "\n ====================================";
+                        "\n =================================";
                     b.Name = details;
                     toolTip1.ToolTipTitle = "Item Details";
                     toolTip1.AutoPopDelay = 32766;

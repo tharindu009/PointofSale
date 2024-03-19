@@ -193,10 +193,33 @@ namespace PointofSale
                 //            "   (payment_amount - due_amount) as 'Paid Amount' ,  payment_type as 'Payment Type' , " +
                 //            "   due_amount as Due, emp_id as 'Sold by' ,    C_id  as Contact , Comment as 'Cust Name/Comment' " +
                 //            "   from sales_payment   where C_id = '" + lblCustID.Text + "' order by  sales_id desc";
-                string sql = "SELECT [ID],[Name],[EmailAddress],[Phone],[Address],[City] as [Vehicle Reg],[PeopleType] FROM [tbl_customer] order by Name asc";
+                string sql = "SELECT [ID],[Name],[EmailAddress],[Phone],[Address],[City] as [Vehicle_Reg],[PeopleType] FROM [tbl_customer] order by Name asc";
                 DAL.DataAccessManager.ExecuteSQL(sql);
                 DataTable dt1 = DAL.DataAccessManager.GetDataTable(sql);
                 dtgviewCusttrxHistory.DataSource = dt1;
+                //------
+                DataGridViewButtonColumn Edit = new DataGridViewButtonColumn();
+                dtgviewCusttrxHistory.Columns.Add(Edit);
+                Edit.HeaderText = "Edit";
+                Edit.Text = "Edit";
+                Edit.Name = "Edit";
+                Edit.ToolTipText = "Edit this category";
+                Edit.UseColumnTextForButtonValue = true;
+                Edit.Width = 30;
+
+                DataGridViewButtonColumn del = new DataGridViewButtonColumn();
+                dtgviewCusttrxHistory.Columns.Add(del);
+                del.HeaderText = "Del";
+                del.Text = "X";
+                del.Name = "del";
+                del.ToolTipText = "Delete this category";
+                del.UseColumnTextForButtonValue = true;
+                del.Width = 30;
+
+                DataGridViewColumn ColID = dtgviewCusttrxHistory.Columns[0];
+                //ColID.Width = 31;
+                DataGridViewColumn ColName = dtgviewCusttrxHistory.Columns[1];
+                //ColName.Width = 220;
             }
             catch
             {
@@ -207,31 +230,57 @@ namespace PointofSale
         {
             try
             {
+                if (e.ColumnIndex == dtgviewCusttrxHistory.Columns["Edit"].Index && e.RowIndex >= 0)
+                {
+                    foreach (DataGridViewRow row1 in dtgviewCusttrxHistory.SelectedRows)
+                    {
+                        DataGridViewRow row = dtgviewCusttrxHistory.Rows[e.RowIndex];
+                        string Name = row.Cells["Name"].Value.ToString();
+                        string Contact = row.Cells["Phone"].Value.ToString();
+                        string Email = row.Cells["EmailAddress"].Value.ToString();
+                        string Address = row.Cells["Address"].Value.ToString();
+                        string City = row.Cells["Vehicle_Reg"].Value.ToString();
+                        string CusID = row.Cells["ID"].Value.ToString();
+                        string Type = row.Cells["PeopleType"].Value.ToString();
 
-                DataGridViewRow row = dtgviewCusttrxHistory.Rows[e.RowIndex];
-                string Name = row.Cells["Name"].Value.ToString();
-                string Contact = row.Cells["Phone"].Value.ToString();
-                string Email = row.Cells["EmailAddress"].Value.ToString();
-                string Address = row.Cells["Address"].Value.ToString();
-                string City = row.Cells["City"].Value.ToString();
-                string CusID = row.Cells["ID"].Value.ToString();
-                string Type = row.Cells["PeopleType"].Value.ToString();
 
+                        txtCustomerName.Text = Name;
+                        txtPhone.Text = Contact;
+                        txtEmailAddress.Text = Email;
+                        txtCity.Text = City;
+                        CombPeopleType.Text = Type;
+                        lblCustID.Text = CusID;
+                        txtCustomerAddress.Text = Address;
 
-                txtCustomerName.Text = Name;
-                txtPhone.Text = Contact;
-                txtEmailAddress.Text = Email;
-                txtCity.Text = City;
-                CombPeopleType.Text = Type;
-                lblCustID.Text = CusID;
-                txtCustomerAddress.Text = Address;
+                        btnSave.Text = "Update";
+                    }
+                }
 
-                btnSave.Text = "Update";
+                //Delete
+                if (e.ColumnIndex == dtgviewCusttrxHistory.Columns["del"].Index && e.RowIndex >= 0)
+                {
+                    foreach (DataGridViewRow rowdel in dtgviewCusttrxHistory.SelectedRows)
+                    {
+                        DialogResult result = MessageBox.Show("Do you want to Delete the record?", "Yes or No", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                        if (result == DialogResult.Yes)
+                        {
+
+                            string sqldel = " delete from tbl_customer where ID = '" + rowdel.Cells[2].Value.ToString() + "'";
+                            DAL.DataAccessManager.ExecuteSQL(sqldel);
+                            MessageBox.Show("Customer/Supplier Deleted");
+                            string sql = "SELECT [ID],[Name],[EmailAddress],[Phone],[Address],[City] as [Vehicle_Reg],[PeopleType] FROM [tbl_customer] order by Name asc";
+                            DAL.DataAccessManager.ExecuteSQL(sql);
+                            DataTable dt1 = DAL.DataAccessManager.GetDataTable(sql);
+                            dtgviewCusttrxHistory.DataSource = dt1;
+                        }
+                    }
+                }
 
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -239,26 +288,31 @@ namespace PointofSale
         {
             try
             {
+                if (e.ColumnIndex == dtgviewCusttrxHistory.Columns["Edit"].Index && e.RowIndex >= 0)
+                {
+                    foreach (DataGridViewRow row1 in dtgviewCusttrxHistory.SelectedRows)
+                    {
+                        DataGridViewRow row = dtgviewCusttrxHistory.Rows[e.RowIndex];
+                        string Name = row.Cells["Name"].Value.ToString();
+                        string Contact = row.Cells["Phone"].Value.ToString();
+                        string Email = row.Cells["EmailAddress"].Value.ToString();
+                        string Address = row.Cells["Address"].Value.ToString();
+                        string City = row.Cells["City"].Value.ToString();
+                        string CusID = row.Cells["ID"].Value.ToString();
+                        string Type = row.Cells["PeopleType"].Value.ToString();
 
-                DataGridViewRow row = dtgviewCusttrxHistory.Rows[e.RowIndex];
-                string Name = row.Cells["Name"].Value.ToString();
-                string Contact = row.Cells["Phone"].Value.ToString();
-                string Email = row.Cells["EmailAddress"].Value.ToString();
-                string Address = row.Cells["Address"].Value.ToString();
-                string City = row.Cells["City"].Value.ToString();
-                string CusID = row.Cells["ID"].Value.ToString();
-                string Type = row.Cells["PeopleType"].Value.ToString();
 
+                        txtCustomerName.Text = Name;
+                        txtPhone.Text = Contact;
+                        txtEmailAddress.Text = Email;
+                        txtCity.Text = City;
+                        CombPeopleType.Text = Type;
+                        lblCustID.Text = CusID;
+                        txtCustomerAddress.Text = Address;
 
-                txtCustomerName.Text = Name;
-                txtPhone.Text = Contact;
-                txtEmailAddress.Text = Email;
-                txtCity.Text = City;
-                CombPeopleType.Text = Type;
-                lblCustID.Text = CusID;
-                txtCustomerAddress.Text = Address;
-
-                btnSave.Text = "Update";
+                        btnSave.Text = "Update";
+                    }
+                }
 
             }
             catch

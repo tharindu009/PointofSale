@@ -308,7 +308,7 @@
             this.txtCustName.Location = new System.Drawing.Point(573, 579);
             this.txtCustName.Multiline = true;
             this.txtCustName.Name = "txtCustName";
-            this.txtCustName.Size = new System.Drawing.Size(240, 56);
+            this.txtCustName.Size = new System.Drawing.Size(328, 80);
             this.txtCustName.TabIndex = 290;
             this.txtCustName.Text = "Done...";
             // 

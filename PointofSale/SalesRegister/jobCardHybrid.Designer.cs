@@ -2365,6 +2365,7 @@
             this.dgrvSalesItemList.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgrvSalesItemList.Location = new System.Drawing.Point(8, 47);
             this.dgrvSalesItemList.Name = "dgrvSalesItemList";
+            this.dgrvSalesItemList.ReadOnly = true;
             this.dgrvSalesItemList.RowHeadersVisible = false;
             this.dgrvSalesItemList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgrvSalesItemList.Size = new System.Drawing.Size(873, 454);

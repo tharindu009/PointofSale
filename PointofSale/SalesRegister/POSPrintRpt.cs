@@ -66,13 +66,18 @@ namespace PointofSale.SalesRegister
                 string vehicleno = dt.Rows[0][43].ToString();
 
                 string cusID = dt.Rows[0][8].ToString();
-                string CusDetail = "";
+                string CusDetailSql = "SELECT [ID],[Name],[EmailAddress],[Phone],[Address],[City] FROM[kts].[dbo].[tbl_customer] WHERE ID = '"+cusID+"'";
+                //DAL.DataAccessManager.ExecuteSQL(CusDetailSql);
+                DataTable cusDt = DAL.DataAccessManager.GetDataTable(CusDetailSql);
+                string customerName = cusDt.Rows[0][4].ToString();
+                string CustomerPhone = cusDt.Rows[0][3].ToString();
+                string CustomerEmail = cusDt.Rows[0][2].ToString();
 
-                //ReportParameter[] parameters = new ReportParameter[2];
-                //parameters[0] = new ReportParameter("Milage", milage);
-
-                //parameters[1] = new ReportParameter("VehicleNo", vehicleno);
-                //this.reportViewer1.LocalReport.SetParameters(parameters);
+                ReportParameter[] parameters = new ReportParameter[3];
+                parameters[0] = new ReportParameter("CustomerName", customerName);
+                parameters[1] = new ReportParameter("CustomerPhone", CustomerPhone);
+                parameters[2] = new ReportParameter("CustomerEmail", CustomerEmail);
+                this.reportViewer1.LocalReport.SetParameters(parameters);
 
                 ReportDataSource reportDSDetail = new ReportDataSource("POSPRINTDataSet", dt);
                 this.reportViewer1.LocalReport.DataSources.Clear();
